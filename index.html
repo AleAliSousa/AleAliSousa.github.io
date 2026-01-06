@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alexandra A. de Sousa</title>
 
+  <meta name="description" content="Evolutionary Neuroscientist — quick links to my Google Site, GitHub repositories, social media, and selected projects." />
+  <meta property="og:title" content="Alexandra A. de Sousa" />
+  <meta property="og:description" content="Evolutionary Neuroscientist — links to Google Site, GitHub repositories, social media, and selected projects." />
+  <meta property="og:type" content="website" />
+
   <style>
     :root {
       --bg: #f9f9f9;
@@ -25,25 +30,15 @@
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 48px auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 960px; margin: 48px auto; padding: 0 24px; }
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    .subtitle { color: var(--muted); font-size: 1rem; }
 
-    header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      margin: 0 0 8px 0;
-      font-size: 2rem;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 1rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
     }
 
     .card {
@@ -51,17 +46,10 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px;
-      margin: 20px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
-    .btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
     .btn {
       display: inline-block;
       padding: 10px 16px;
@@ -74,6 +62,19 @@
     }
     .btn:hover { background: var(--accent-dark); }
 
+    .link-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+    .tag {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .tag:hover { background: #f0f6ff; }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -81,37 +82,77 @@
       margin-top: 24px;
     }
   </style>
-
-  <!-- Social sharing -->
-  <meta property="og:title" content="Alexandra A. de Sousa" />
-  <meta property="og:description" content="Evolutionary Neuroscientist — links to Google Site and GitHub repositories." />
-  <meta property="og:type" content="website" />
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Alexandra A. de Sousa</h1>
-      <div class="subtitle">Visiting Scientist</div>
+      <div class="subtitle">Evolutionary Neuroscientist</div>
     </header>
 
+    <!-- Quick links -->
     <section class="card">
       <h2>About</h2>
       <p>
-        I am an Evolutionary Neuroscientist focused on interdisciplinary, collaborative research. This page provides quick links to my main website and my GitHub projects.
+        I’m an Evolutionary Neuroscientist focused on interdisciplinary, collaborative research.
+        This page provides quick links to my main website, GitHub projects, social profiles, and a few featured tools.
       </p>
       <div class="btns">
         <a class="btn" href="https://sites.google.com/site/alexandraallisonsousa" target="_blank" rel="noopener">Google Site</a>
         <a class="btn" href="https://github.com/AleAliSousa?tab=repositories" target="_blank" rel="noopener">GitHub Repositories</a>
       </div>
+      <div class="link-row">
+        <!-- Replace the # with your actual profile URLs -->
+        <a class="tag" href="#" target="_blank" rel="noopener">BlueSky</a>
+        <a class="tag" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="tag" href="#" target="_blank" rel="noopener">Twitter/X</a>
+      </div>
     </section>
 
+    <!-- Featured projects pulled from CV -->
     <section class="card">
-      <h2>Current Interests</h2>
-      <ul>
-        <li>Open, collaborative science</li>
-        <li>Data-driven approaches in evolutionary neuroscience</li>
-        <li>Reproducible research & simple web tooling</li>
-      </ul>
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>MIME: Multimodal Interactive Mind Explorer</h3>
+          <p>
+            A centralized platform for researchers to discover, contribute, and manage histological metadata entries in MongoDB.
+          </p>
+          <a class="btn" href="https://mime.connect-project.io/" target="_blank" rel="noopener">Open MIME</a>
+        </div>
+
+        <div class="card">
+          <h3>ShinierBrains: Cognitive Assessment Platform</h3>
+          <p>
+            Interactive web app to calculate encephalization and visualise data in Shiny.
+          </p>
+          <a class="btn" href="https://3zqqmj-alexandra0allison-de0sousa.shinyapps.io/ShinierBrains/" target="_blank" rel="noopener">Open ShinierBrains</a>
+        </div>
+
+        <div class="card">
+          <h3>The Integrative Biology of Brain Evolution (TIBBE)</h3>
+          <p>
+            Special Topic Network for integrative brain evolution research.
+          </p>
+          <a class="btn" href="https://tibbe-network.github.io" target="_blank" rel="noopener">Visit TIBBE</a>
+        </div>
+
+        <div class="card">
+          <h3>OPEN — Visual Impairment Research Network</h3>
+          <p>
+            Online Engagement Participation Network (OPEN) for visual impairment research.
+          </p>
+          <a class="btn" href="https://sites.google.com/view/open-vi-research" target="_blank" rel="noopener">Visit OPEN</a>
+        </div>
+
+        <div class="card">
+          <h3>Brain Evolution in the News</h3>
+          <p>
+            Public engagement blog and vodcast about brain evolution.
+          </p>
+          <a class="btn" href="https://brainevolutionnews.blogspot.com" target="_blank" rel="noopener">Read the Blog</a>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -125,4 +166,5 @@
   </script>
 </body>
 </html>
+
 

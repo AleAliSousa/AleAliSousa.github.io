@@ -1,37 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexandra A. de Sousa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: centre;
-            margin: 50px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            colour: #333;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
-            background: #007acc;
-            colour: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background: #005fa3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alexandra A. de Sousa</title>
+
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --muted: #555;
+      --accent: #0a65c0;
+      --accent-dark: #084f96;
+      --card: #ffffff;
+      --border: #e6e6e6;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.15s ease-in-out;
+    }
+    .btn:hover { background: var(--accent-dark); }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 24px;
+    }
+  </style>
+
+  <!-- Social sharing -->
+  <meta property="og:title" content="Alexandra A. de Sousa" />
+  <meta property="og:description" content="Visiting Scientist — links to Google Site and GitHub repositories." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>Visit my main website for more information:</p>
-    <a href="https://sites.google.com/site/alexandraallisonsousa" target="_blank">Go to My Website</a>
+  <div class="container">
+    <header>
+      <h1>Alexandra A. de Sousa</h1>
+      <div class="subtitle">Visiting Scientist</div>
+    </header>
+
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        I’m a Visiting Scientist focused on interdisciplinary, collaborative research. This page provides quick links to my main website and my GitHub projects.
+      </p>
+      <div class="btns">
+        <a class="btn" href="https://sites.google.com/site/alexandraallisonsousa" target="_blank" rel="noopener">Google Site</a>
+        <a class="btn" href="https://github.com/AleAliSousa?tab=repositories" target="_blank" rel="noopener">GitHub Repositories</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Current Interests</h2>
+      <ul>
+        <li>Open, collaborative science</li>
+        <li>Data-driven approaches in neuroscience</li>
+        <li>Reproducible research & simple web tooling</li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Alexandra A. de Sousa
+    </footer>
+  </div>
+
+  <script>
+    // Keep the year current automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+

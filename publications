@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publications — Alexandra A. de Sousa</title>
+<meta name="description" content="Filterable list of publications with labels (multi-tag AND/OR filtering).">
+
+<style>
+  :root{
+    --bg:#f9f9f9; --card:#fff; --text:#222; --muted:#666;
+    --accent:#0a65c0; --accent-dark:#084f96; --border:#e6e6e6;
+    --chip:#eef4ff; --chip-text:#0a3d7a;
+  }
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  .container{max-width:950px;margin:40px auto;padding:0 20px;}
+  h1{margin:0 0 12px;font-size:2rem}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  #filters{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0}
+  @media(min-width:760px){#filters{grid-template-columns: 1fr auto auto}}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--accent-dark);padding:6px 10px;cursor:pointer;font-weight:600}
+  .chip.active{background:var(--chip);color:var(--chip-text);border-color:#d6e6ff}
+  .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  select,input[type="search"]{padding:8px 10px;border:1px solid var(--border);border-radius:8px}
+  .btn{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-dark)}
+  .pub{border-bottom:1px solid var(--border);padding:14px 0}
+  .pub:last-child{border-bottom:0}
+  .pub .title{font-weight:700}
+  .pub .meta{color:var(--muted);font-size:.95rem}
+  .label-list{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+  .label{font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:3px 8px;color:var(--accent-dark);background:#fff}
+  .empty{color:var(--muted);text-align:center;padding:20px}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="container" id="pubs-app">
+  <header>
+    <h1>Publications</h1>
+    <p class="meta">Filter by label, search text, or year. Toggle ANY/ALL to change how multiple labels combine.</p>
+  </header>
+
+  <!-- FILTERS -->
+  <section id="filters" class="card">
+    <div class="chips" id="labelChips"></div>
+
+    <div class="controls">
+      <button class="btn" id="modeBtn" title="Switch between matching ANY label or ALL selected labels">Mode: <strong id="modeText">ANY</strong></button>
+      <button class="btn" id="clearBtn">Clear</button>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search title/authors/venue..." />
+      <select id="year">
+        <option value="">All years</option>
+      </select>
+      <button class="btn primary" id="shareBtn" title="Copy filter link to clipboard">Copy link</button>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="card" aria-live="polite" aria-busy="false">
+    <div id="pubList"></div>
+    <div id="empty" class="empty" hidden>No publications match your filters.</div>
+  </section>
+</div>
+
+<!-- 🔢 DATA: add/edit items here (multi-label allowed) -->
+<script type="application/json" id="pubs-data">
+[
+  {
+    "title": "Translating time across species: Predicting neuropathologies through comparative lifespan studies",
+    "authors": "Charvet, C. J., & de Sousa, A. A.",
+    "year": 2025,
+    "venue": "Reference Module in Neuroscience and Biobehavioral Psychology (Elsevier)",
+    "doi": "10.1016/B978-0-443-27380-3.00038-5",
+    "url": "https://doi.org/10.1016/B978-0-443-27380-3.00038-5",
+    "labels": ["review","comparative","lifespan","neurodegeneration"]
+  },
+  {
+    "title": "Same data, different analysts: variation in effect sizes due to analytical decisions in ecology and evolutionary biology",
+    "authors": "Gould, E.; Fraser, H. S.; Parker, T. H.; ... de Sousa, A. A.; … Zitomer, R. A.",
+    "year": 2025,
+    "venue": "BMC Biology 23:35",
+    "doi": "10.1186/s12915-024-02101-x",
+    "url": "https://doi.org/10.1186/s12915-024-02101-x",
+    "labels": ["methods","meta-research","open-science"]
+  },
+  {
+    "title": "Participant permanence: experiences of research involvement in UK adults with vision impairment (OPEN)",
+    "authors": "Roberts-Mills, W.; Richardson, M.; Scheller, M.; Tavoulari, A.; Proulx, M. J.; de Sousa, A. A.",
+    "year": 2024,
+    "venue": "British Journal of Visual Impairment",
+    "doi": "10.1177/02646196241298203",
+    "url": "https://journals.sagepub.com/doi/10.1177/02646196241298203",
+    "labels": ["vision","public-engagement","OPEN","human-factors"]
+  },
+  {
+    "title": "From fossils to mind",
+    "authors": "de Sousa, A. A.; Beaudet, A.; Calvey, T.; ... Wei, Y.",
+    "year": 2023,
+    "venue": "Communications Biology 6:636",
+    "doi": "10.1038/s42003-023-04803-4",
+    "url": "https://www.nature.com/articles/s42003-023-04803-4",
+    "labels": ["evolution","review","comparative-neuroanatomy"]
+  },
+  {
+    "title": "A natural history of vertebrate vision loss: insight from evolution for human visual function",
+    "authors": "de Sousa, A. A.; Todorov, O. S.; Proulx, M. J.",
+    "year": 2022,
+    "venue": "Neuroscience & Biobehavioral Reviews 134:104550",
+    "doi": "10.1016/j.neubiorev.2022.104550",
+    "url": "https://doi.org/10.1016/j.neubiorev.2022.104550",
+    "labels": ["vision","evolution","review"]
+  },
+  {
+    "title": "Comparative cytoarchitectural analyses of striate and extrastriate areas in hominoids",
+    "authors": "de Sousa, A. A.; Sherwood, C. C.; Schleicher, A.; et al.",
+    "year": 2010,
+    "venue": "Cerebral Cortex 20, 966–981",
+    "doi": "10.1093/cercor/bhp158",
+    "url": "https://doi.org/10.1093/cercor/bhp158",
+    "labels": ["neuroanatomy","hominoids","histology"]
+  }
+]
+</script>
+
+<!-- ⚙️ LOGIC -->
+<script>
+(function() {
+  const data = JSON.parse(document.getElementById('pubs-data').textContent);
+  const chipsEl = document.getElementById('labelChips');
+  const listEl  = document.getElementById('pubList');
+  const emptyEl = document.getElementById('empty');
+  const yearSel = document.getElementById('year');
+  const qInput  = document.getElementById('q');
+  const modeBtn = document.getElementById('modeBtn');
+  const modeText= document.getElementById('modeText');
+  const clearBtn= document.getElementById('clearBtn');
+  const shareBtn= document.getElementById('shareBtn');
+
+  // --- build label set + years
+  const labels = Array.from(new Set(data.flatMap(p => p.labels))).sort((a,b)=>a.localeCompare(b));
+  const years  = Array.from(new Set(data.map(p => p.year))).sort((a,b)=>b-a);
+  years.forEach(y => yearSel.insertAdjacentHTML('beforeend', `<option value="${y}">${y}</option>`));
+
+  // state
+  const state = { labelsSelected: new Set(), mode: 'any', year: '', q: '' };
+
+  // restore from URL hash (e.g., #tags=vision,evolution&mode=all&year=2024&q=tree)
+  function restoreFromHash() {
+    const h = new URLSearchParams(location.hash.replace(/^#/, ''));
+    const tags = (h.get('tags') || '').split(',').map(t=>t.trim()).filter(Boolean);
+    state.labelsSelected = new Set(tags);
+    state.mode = (h.get('mode')==='all') ? 'all' : 'any';
+    state.year = h.get('year') || '';
+    state.q    = h.get('q') || '';
+    yearSel.value = state.year;
+    qInput.value  = state.q;
+    modeText.textContent = state.mode.toUpperCase();
+  }
+
+  // write URL hash for sharing
+  function writeHash() {
+    const h = new URLSearchParams();
+    if (state.labelsSelected.size) h.set('tags', Array.from(state.labelsSelected).join(','));
+    if (state.mode==='all')        h.set('mode', 'all');
+    if (state.year)                h.set('year', state.year);
+    if (state.q)                   h.set('q', state.q);
+    const s = h.toString();
+    history.replaceState(null, '', s ? '#'+s : ' ');
+  }
+
+  // render chips
+  function renderChips() {
+    chipsEl.innerHTML = '';
+    labels.forEach(lbl => {
+      const active = state.labelsSelected.has(lbl) ? 'active' : '';
+      chipsEl.insertAdjacentHTML('beforeend',
+        `<button class="chip ${active}" data-lbl="${lbl}" aria-pressed="${active? 'true':'false'}">${lbl}</button>`);
+    });
+  }
+
+  // filter logic
+  function matches(p) {
+    // label match
+    const sel = Array.from(state.labelsSelected);
+    const have = new Set(p.labels);
+    const labelsOK = sel.length === 0 ? true :
+      (state.mode==='any'
+        ? sel.some(t => have.has(t))
+        : sel.every(t => have.has(t)));
+
+    // year match
+    const yearOK = state.year ? String(p.year) === String(state.year) : true;
+
+    // text search
+    const q = state.q.trim().toLowerCase();
+    const text = (p.title + ' ' + p.authors + ' ' + (p.venue||'')).toLowerCase();
+    const qOK = q ? text.includes(q) : true;
+
+    return labelsOK && yearOK && qOK;
+  }
+
+  // render list
+  function renderList() {
+    const items = data.filter(matches);
+    listEl.innerHTML = items.map(p => `
+      <article class="pub">
+        <div class="title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></div>
+        <div class="meta">
+          ${p.authors} (${p.year}) ${p.venue ? ' — ' + p.venue : ''}
+          ${p.doi ? ` — DOI: <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.doi}</a>` : ''}
+        </div>
+        <div class="label-list">
+          ${p.labels.map(l => `<span class="label">${l}</span>`).join('')}
+        </div>
+      </article>
+    `).join('');
+    emptyEl.hidden = items.length !== 0;
+    document.getElementById('results').setAttribute('aria-busy','false');
+  }
+
+  // init UI
+  restoreFromHash();
+  renderChips();
+  renderList();
+
+  // events
+  chipsEl.addEventListener('click', (e) => {
+    if (!e.target.closest('.chip')) return;
+    const chip = e.target.closest('.chip');
+    const lbl  = chip.dataset.lbl;
+    if (state.labelsSelected.has(lbl)) state.labelsSelected.delete(lbl);
+    else state.labelsSelected.add(lbl);
+    renderChips();
+    writeHash();
+    renderList();
+  });
+
+  modeBtn.addEventListener('click', () => {
+    state.mode = state.mode === 'any' ? 'all' : 'any';
+    modeText.textContent = state.mode.toUpperCase();
+    writeHash();
+    renderList();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    state.labelsSelected.clear();
+    state.mode = 'any';
+    state.year = '';
+    state.q = '';
+    yearSel.value = '';
+    qInput.value = '';
+    modeText.textContent = 'ANY';
+    renderChips();
+    writeHash();
+    renderList();
+  });
+
+  yearSel.addEventListener('change', () => {
+    state.year = yearSel.value;
+    writeHash();
+    renderList();
+  });
+
+  qInput.addEventListener('input', () => {
+    state.q = qInput.value;
+    writeHash();
+    renderList();
+  });
+
+  shareBtn.addEventListener('click', async () => {
+    writeHash();
+    try {
+      await navigator.clipboard.writeText(location.href);
+      shareBtn.textContent = 'Link copied!';
+      setTimeout(()=> shareBtn.textContent = 'Copy link', 1200);
+    } catch {
+      // ignore clipboard errors
+    }
+  });
+
+})();
+</script>
+
+<noscript>
+  <div class="container">
+    <p><em>JavaScript is disabled — filtering requires JavaScript.</em></p>
+  </div>
+</noscript>
+</body>
+</html>

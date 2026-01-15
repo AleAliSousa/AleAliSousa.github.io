@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Publications — Alexandra A. de Sousa</title>
-<meta name="description" content="Filterable publications by Type (article, review, dissertation, etc.) and by multiple topic labels with AND/OR logic.">
+<meta name="description" content="Filterable publications by Type, topic Labels (multi-tag AND/OR), Year, and Search.">
 
 <style>
   :root{
@@ -17,16 +16,17 @@
   .container{max-width:950px;margin:40px auto;padding:0 20px;}
   h1{margin:0 0 12px;font-size:2rem}
   .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-  #filters{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0}
-  @media(min-width:900px){#filters{grid-template-columns:1fr auto auto}}
+  #filters{display:grid;grid-template-columns:1fr;gap:16px;margin:18px 0}
+  @media(min-width:980px){#filters{grid-template-columns:1fr}}
+  .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .controls label{font-weight:600}
+  select,input[type="search"]{padding:8px 10px;border:1px solid var(--border);border-radius:8px}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--accent-dark);padding:6px 10px;cursor:pointer;font-weight:600}
   .chip.active{background:var(--chip);color:var(--chip-text);border-color:#d6e6ff}
-  .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  select,input[type="search"]{padding:8px 10px;border:1px solid var(--border);border-radius:8px}
-  .btn{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer}
-  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-  .btn.primary:hover{background:var(--accent-dark)}
+  .links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .link{color:var(--accent-dark);text-decoration:underline;cursor:pointer}
+  .link:focus,.link:hover{color:var(--accent)}
   .pub{border-bottom:1px solid var(--border);padding:14px 0}
   .pub:last-child{border-bottom:0}
   .pub .title{font-weight:700}
@@ -41,38 +41,39 @@
 <div class="container" id="pubs-app">
   <header>
     <h1>Publications</h1>
-    <p class="meta">Filter by <strong>Type</strong>, by topic <strong>Labels</strong> (ANY/ALL), by <strong>Year</strong>, or by <strong>Search</strong>. Use “Copy link” to share the current filters.</p>
+    <p class="meta">Use the controls to filter by <strong>Type</strong>, <strong>Year</strong>, and <strong>Search</strong>. Topic <strong>Labels</strong> are the only buttons and support ANY/ALL logic.</p>
   </header>
 
   <!-- FILTERS -->
   <section id="filters" class="card">
-    <!-- Row 1: Type dropdown -->
-    <div class="controls">
-      <label for="typeSel" style="font-weight:600">Type:</label>
-      <select id="typeSel">
-        <option value="">All types</option>
-        <!-- options injected from data -->
+    <!-- All non-label filters grouped together -->
+    <div class="controls" id="nonLabelFilters">
+      <label for="typeSel">Type:</label>
+      <select id="typeSel"><option value="">All types</option></select>
+
+      <label for="year">Year:</label>
+      <select id="year"><option value="">All years</option></select>
+
+      <label for="logicSel">Label logic:</label>
+      <select id="logicSel">
+        <option value="any" selected>ANY (match any selected label)</option>
+        <option value="all">ALL (must match all selected labels)</option>
       </select>
+
+      <label for="q">Search:</label>
+      <input type="search" id="q" placeholder="Title / authors / venue…" />
     </div>
 
-    <!-- Row 2: Label chips + mode + clear -->
+    <!-- Labels: the only buttons -->
     <div>
       <div style="font-weight:600;margin-bottom:6px">Labels:</div>
       <div class="chips" id="labelChips"></div>
-      <div class="controls" style="margin-top:10px">
-        <button class="btn" id="modeBtn" title="Switch between matching ANY label or ALL selected labels">Mode: <strong id="modeText">ANY</strong></button>
-        <button class="btn" id="clearBtn">Clear</button>
-      </div>
     </div>
 
-    <!-- Row 3: Search / Year / Share -->
-    <div class="controls">
-      <input type="search" id="q" placeholder="Search title/authors/venue..." />
-      <select id="year">
-        <option value="">All years</option>
-        <!-- years injected from data -->
-      </select>
-      <button class="btn primary" id="shareBtn" title="Copy filter link to clipboard">Copy link</button>
+    <!-- Links (not buttons) for utility actions -->
+    <div class="links">
+      <a href="#" id="clearLink" class="link">Clear filters</a>
+      <a href="#" id="shareLink" class="link" title="Copy a link with current filters">Copy link</a>
     </div>
   </section>
 
@@ -82,6 +83,7 @@
     <div id="empty" class="empty" hidden>No publications match your filters.</div>
   </section>
 </div>
+
 
 <!-- 🔢 DATA: paste your JSON array (the full list) between these tags -->
 <script type="application/json" id="pubs-data">
@@ -105,7 +107,7 @@
     "doi": "10.1186/s12915-024-02101-x",
     "url": "https://doi.org/10.1186/s12915-024-02101-x",
     "type": "article",
-    "labels": ["methods","meta-research","open-science","statistics","collaborative science"]
+    "labels": ["methods","meta-research","open-science","statistics","collaboration"]
   },
   {
     "title": "Translating Time: Challenges, Progress, and Future Directions",
@@ -125,7 +127,7 @@
     "doi": "10.1177/02646196241298203",
     "url": "https://journals.sagepub.com/doi/10.1177/02646196241298203",
     "type": "article",
-    "labels": ["vision","public-engagement","collaborative science","human-factors","accessibility","outreach"]
+    "labels": ["visual-impairment","vision","public-engagement","collaboration","human-factors","accessibility"]
   },
   {
     "title": "Thinking on your Feet: enhancing phylogenetic tree learning through a kinaesthetic approach",
@@ -135,7 +137,7 @@
     "doi": "10.1186/s12052-024-00215-y",
     "url": "https://evolution-outreach.biomedcentral.com/articles/10.1186/s12052-024-00215-y",
     "type": "article",
-    "labels": ["education","phylogenetics","teaching","outreach"]
+    "labels": ["visual-impairment","crossmodal","education","phylogenetics","teaching","public-engagement"]
   },
   {
     "title": "Sociocultural pressures, body satisfaction and self-esteem in congenitally-blind, late-blind and sighted men and women",
@@ -145,7 +147,7 @@
     "doi": "10.1177/0145482X241235167",
     "url": "https://journals.sagepub.com/doi/10.1177/0145482X241235167",
     "type": "article",
-    "labels": ["vision","psychology","wellbeing"]
+    "labels": ["visual-impairment","vision","psychology","wellbeing"]
   },
   {
     "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
@@ -205,7 +207,7 @@
     "doi": "10.3389/fpsyg.2023.1043088",
     "url": "https://doi.org/10.3389/fpsyg.2023.1043088",
     "type": "article",
-    "labels": ["human-factors","cross-cultural","workspace","built-environment","architecture"]
+    "labels": ["human-factors","cross-cultural","workspace","architecture"]
   },
   {
     "title": "The effects of social density, spatial density, noise, and office views on perceived personal space in the virtual workplace",
@@ -215,7 +217,7 @@
     "doi": "10.3389/fcomp.2023.1066881",
     "url": "https://doi.org/10.3389/fcomp.2023.1066881",
     "type": "article",
-    "labels": ["virtual-workplace","human-factors","VR","built-environment","architecture"]
+    "labels": ["virtual-workplace","human-factors","VR","architecture"]
   },
   {
     "title": "Proximate factors in human mate preference: The role of sexual and romantic attraction",
@@ -285,7 +287,7 @@
     "doi": "10.1016/j.neubiorev.2022.104550",
     "url": "https://doi.org/10.1016/j.neubiorev.2022.104550",
     "type": "review",
-    "labels": ["vision","evolution"]
+    "labels": ["visual-impairment","vision","evolution"]
   },
   {
     "title": "A Virtual Reality Application of the Rubber Hand Illusion Induced by Ultrasonic Mid‑Air Haptic Stimulation",
@@ -295,7 +297,7 @@
     "doi": "10.1145/3487563",
     "url": "https://doi.org/10.1145/3487563",
     "type": "article",
-    "labels": ["VR","haptics","rubber-hand-illusion","perception"]
+    "labels": ["VR","haptics","rubber-hand-illusion","perception","HCI"]
   },
   {
     "title": "The role of vision in the emergence of mate preferences",
@@ -305,7 +307,7 @@
     "doi": "10.1007/s10508-020-01901-w",
     "url": "https://doi.org/10.1007/s10508-020-01901-w",
     "type": "article",
-    "labels": ["vision","psychology","mate-preference"]
+    "labels": ["visual-impairment","vision","psychology","mate-preference"]
   },
   {
     "title": "Neuroplasticity and crossmodal connectivity in the normal, healthy brain",
@@ -325,7 +327,7 @@
     "doi": "",
     "url": "https://doi.org/10.1145/3411764.3445494",
     "type": "article",
-    "labels": ["accessibility","gaming","HCI","vision"]
+    "labels": ["visual-impairment","accessibility","gaming","HCI","vision"]
   },
   {
     "title": "evALLution: making basic evolution concepts accessible to blind people through a multisensory tree of life",
@@ -335,7 +337,7 @@
     "doi": "10.1186/s12052-021-00143-1",
     "url": "https://doi.org/10.1186/s12052-021-00143-1",
     "type": "article",
-    "labels": ["education","vision","accessibility","outreach"]
+    "labels": ["visual-impairment","education","vision","accessibility","public-engagement"]
   },
   {
     "title": "Visual‑to‑auditory sensory substitution alters language asymmetry in both sighted novices and experienced visually impaired users",
@@ -345,7 +347,7 @@
     "doi": "10.1016/j.apergo.2020.103072",
     "url": "https://doi.org/10.1016/j.apergo.2020.103072",
     "type": "article",
-    "labels": ["sensory-substitution","lateralization","vision","ergonomics"]
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","lateralization","vision","ergonomics","HCI"]
   },
   {
     "title": "Primate hippocampus size and organization are predicted by sociality but not diet",
@@ -355,7 +357,7 @@
     "doi": "10.1098/rspb.2019.1712",
     "url": "https://doi.org/10.1098/rspb.2019.1712",
     "type": "article",
-    "labels": ["primates","hippocampus","sociality","evolution"]
+    "labels": ["primates","hippocampus","social-behavior","evolution"]
   },
   {
     "title": "The right way to kiss: directionality bias in head‑turning during kissing",
@@ -365,7 +367,7 @@
     "doi": "10.1038/s41598-017-04942-9",
     "url": "https://doi.org/10.1038/s41598-017-04942-9",
     "type": "article",
-    "labels": ["psychology","behavior","laterality"]
+    "labels": ["psychology","social-behavior","laterality"]
   },
   {
     "title": "Neocortex expansion is linked to size variations in gene families with chemotaxis, cell–cell signalling and immune response functions in mammals",
@@ -385,7 +387,7 @@
     "doi": "10.3389/fpsyg.2016.00064",
     "url": "https://doi.org/10.3389/fpsyg.2016.00064",
     "type": "article",
-    "labels": ["cognition","environment","built-environment","architecture"]
+    "labels": ["cognition","environment","crossmodal","architecture"]
   },
   {
     "title": "Other ways of seeing: From behavior to neural mechanisms in the online visual control of action with sensory substitution",
@@ -395,7 +397,7 @@
     "doi": "10.3233/RNN-150541",
     "url": "http://dx.doi.org/10.3233/RNN-150541",
     "type": "review",
-    "labels": ["sensory-substitution","action-control"]
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","action-control"]
   },
   {
     "title": "There or not there? A multidisciplinary review and research agenda on the impact of transparent barriers on human perception, action, and social behavior",
@@ -405,7 +407,7 @@
     "doi": "10.3389/fpsyg.2015.01381",
     "url": "https://doi.org/10.3389/fpsyg.2015.01381",
     "type": "review",
-    "labels": ["perception","personal-space","built-environment","architecture"]
+    "labels": ["perception","crossmodal","personal-space","architecture"]
   },
   {
     "title": "What can volumes reveal about human brain evolution? A framework for bridging behavioral, histometric, and volumetric perspectives",
@@ -455,7 +457,7 @@
     "doi": "10.1016/B978-0-444-53860-4.00014-3",
     "url": "https://doi.org/10.1016/B978-0-444-53860-4.00014-3",
     "type": "review",
-    "labels": ["evolution","hominins","paleoanthropology"]
+    "labels": ["evolution","hominins","anthropology"]
   },
   {
     "title": "Hominoid visual brain structure volumes and the position of the lunate sulcus",
@@ -545,7 +547,7 @@
     "doi": "",
     "url": "",
     "type": "book-review",
-    "labels": ["paleoanthropology","neanderthals"]
+    "labels": ["anthropology","neanderthals"]
   },
   {
     "title": "From Fossils to Mind",
@@ -555,7 +557,7 @@
     "doi": "",
     "url": "https://www.elsevier.com/books/from-fossils-to-mind/calvey/978-0-323-99107-0",
     "type": "edited-volume",
-    "labels": ["evolution","collection","open-science","paleoanthropology"]
+    "labels": ["evolution","museums","open-science","anthropology","collaboration"]
   },
   {
     "title": "Hominoid brain organization: Histometric and morphometric comparisons of visual brain structures",
@@ -565,25 +567,23 @@
     "doi": "",
     "url": "",
     "type": "dissertation",
-    "labels": ["hominoids","histology","visual-cortex","paleoanthropology","neuroanatomy"]
+    "labels": ["hominoids","histology","visual-cortex","anthropology","neuroanatomy"]
   }
-]
 
+]
 </script>
 
 <!-- ⚙️ LOGIC -->
 <script>
 (function() {
-  // --- Utilities
   const norm = s => (s||'').toString().trim().replace(/\s+/g,' ').toLowerCase();
 
-  // --- Load data
+  // Load data
   let data = [];
-  try {
-    data = JSON.parse(document.getElementById('pubs-data').textContent) || [];
-  } catch(e){ console.error('Invalid JSON in #pubs-data:', e); }
+  try { data = JSON.parse(document.getElementById('pubs-data').textContent) || []; }
+  catch(e){ console.error('Invalid JSON in #pubs-data:', e); }
 
-  // Normalize labels (case/space) and capture display casing for chips
+  // Normalize labels & types, capture display casing
   const labelDisplay = new Map(); // normalized -> first-seen original
   data.forEach(p => {
     const labs = Array.isArray(p.labels) ? p.labels : [];
@@ -593,9 +593,7 @@
       return n;
     }).filter(Boolean);
   });
-
-  // Normalize type; capture display casing
-  const typeDisplay = new Map(); // normalized -> first-seen original
+  const typeDisplay = new Map();
   data.forEach(p => {
     const raw = (p.type ?? '').toString().trim();
     const n = norm(raw) || 'other';
@@ -603,62 +601,61 @@
     if (!typeDisplay.has(n)) typeDisplay.set(n, raw || 'Other');
   });
 
-  // Build facets
+  // Facets
   const labelKeys = Array.from(new Set(data.flatMap(p => p.labels))).sort((a,b)=>a.localeCompare(b));
   const types     = Array.from(new Set(data.map(p => p.typeNorm))).sort((a,b)=>a.localeCompare(b));
   const years     = Array.from(new Set(data.map(p => p.year))).sort((a,b)=>b-a);
 
-  // --- DOM
-  const chipsEl  = document.getElementById('labelChips');
+  // DOM
+  const labelChips = document.getElementById('labelChips');
   const listEl   = document.getElementById('pubList');
   const emptyEl  = document.getElementById('empty');
   const yearSel  = document.getElementById('year');
   const qInput   = document.getElementById('q');
-  const modeBtn  = document.getElementById('modeBtn');
-  const modeText = document.getElementById('modeText');
-  const clearBtn = document.getElementById('clearBtn');
-  const shareBtn = document.getElementById('shareBtn');
+  const logicSel = document.getElementById('logicSel');
+  const clearLink= document.getElementById('clearLink');
+  const shareLink= document.getElementById('shareLink');
   const typeSel  = document.getElementById('typeSel');
 
-  // Populate Type select & Year select
+  // Populate selects
   types.forEach(t => typeSel.insertAdjacentHTML('beforeend', `<option value="${t}">${typeDisplay.get(t) || t}</option>`));
   years.forEach(y => yearSel.insertAdjacentHTML('beforeend', `<option value="${y}">${y}</option>`));
 
-  // --- State
-  const state = { type: '', labelsSelected: new Set(), mode: 'any', year: '', q: '' };
+  // State
+  const state = { type:'', labelsSelected:new Set(), mode:'any', year:'', q:'' };
 
-  // Restore from hash (e.g., #type=review&tags=vision,vr&mode=all&year=2024&q=tree)
+  // Hash restore
   function restoreFromHash() {
     const h = new URLSearchParams(location.hash.replace(/^#/, ''));
-    const tags = (h.get('tags') || '').split(',').map(t=>norm(t)).filter(Boolean);
-    state.labelsSelected = new Set(tags);
     state.type = norm(h.get('type') || '');
-    if (state.type && !types.includes(state.type)) state.type = ''; // guard unknown
     state.mode = (h.get('mode')==='all') ? 'all' : 'any';
     state.year = h.get('year') || '';
     state.q    = h.get('q') || '';
+    const tags = (h.get('tags') || '').split(',').map(norm).filter(Boolean);
+    state.labelsSelected = new Set(tags);
 
+    if (!types.includes(state.type)) state.type = '';
     typeSel.value = state.type;
+    logicSel.value = state.mode;
     yearSel.value = state.year;
-    qInput.value  = state.q;
-    modeText.textContent = state.mode.toUpperCase();
+    qInput.value = state.q;
   }
 
-  // Write URL hash
+  // Hash write
   function writeHash() {
     const h = new URLSearchParams();
-    if (state.type)               h.set('type', state.type);
-    if (state.labelsSelected.size)h.set('tags', Array.from(state.labelsSelected).join(','));
-    if (state.mode==='all')       h.set('mode', 'all');
-    if (state.year)               h.set('year', state.year);
-    if (state.q)                  h.set('q', state.q);
+    if (state.type) h.set('type', state.type);
+    if (state.labelsSelected.size) h.set('tags', Array.from(state.labelsSelected).join(','));
+    if (state.mode==='all') h.set('mode', 'all');
+    if (state.year) h.set('year', state.year);
+    if (state.q) h.set('q', state.q);
     const s = h.toString();
     history.replaceState(null, '', s ? '#'+s : ' ');
   }
 
   // Render label chips
   function renderChips() {
-    chipsEl.innerHTML = labelKeys.map(k => {
+    labelChips.innerHTML = labelKeys.map(k => {
       const active = state.labelsSelected.has(k) ? 'active' : '';
       const text = labelDisplay.get(k) || k;
       return `<button class="chip ${active}" data-key="${k}" aria-pressed="${active? 'true':'false'}">${text}</button>`;
@@ -667,22 +664,16 @@
 
   // Filtering
   function matches(p) {
-    // Type (single-select)
     const typeOK = state.type ? p.typeNorm === state.type : true;
 
-    // Labels (ANY/ALL)
     const sel = Array.from(state.labelsSelected);
     const have = new Set(p.labels);
     const labelsOK = sel.length === 0
       ? true
-      : (state.mode==='any'
-          ? sel.some(t => have.has(t))
-          : sel.every(t => have.has(t)));
+      : (state.mode==='any' ? sel.some(t => have.has(t)) : sel.every(t => have.has(t)));
 
-    // Year
     const yearOK = state.year ? String(p.year) === String(state.year) : true;
 
-    // Text
     const q = state.q.trim().toLowerCase();
     const text = (p.title + ' ' + p.authors + ' ' + (p.venue||'')).toLowerCase();
     const qOK = q ? text.includes(q) : true;
@@ -690,13 +681,13 @@
     return typeOK && labelsOK && yearOK && qOK;
   }
 
-  // Render results
+  // Render list (title first; DOI later; no raw URL text shown first)
   function renderList() {
     const items = data.filter(matches).sort((a,b)=> b.year - a.year || a.title.localeCompare(b.title));
     listEl.innerHTML = items.map(p => {
-      const titleHTML = p.url ? `${p.url}${p.title}</a>` : p.title;
+      const titleHTML = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
       const typeBadge = `<span class="type-badge">${typeDisplay.get(p.typeNorm) || p.typeNorm}</span>`;
-      const doiHTML   = p.doi ? ` — DOI: https://doi.org/${p.doi}${p.doi}</a>` : '';
+      const doiHTML   = p.doi ? ` — <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI: ${p.doi}</a>` : '';
       const labelsHTML= (p.labels||[]).map(k => `<span class="label">${labelDisplay.get(k) || k}</span>`).join('');
       return `
         <article class="pub">
@@ -712,52 +703,44 @@
     document.getElementById('results').setAttribute('aria-busy','false');
   }
 
-  // Init
+  // Init + events
   restoreFromHash();
   renderChips();
   renderList();
 
-  // Events
-  chipsEl.addEventListener('click', (e) => {
+  labelChips.addEventListener('click', (e) => {
     const b = e.target.closest('.chip'); if (!b) return;
     const key = b.dataset.key;
     state.labelsSelected.has(key) ? state.labelsSelected.delete(key) : state.labelsSelected.add(key);
     renderChips(); writeHash(); renderList();
   });
+  typeSel.addEventListener('change', () => { state.type = typeSel.value; writeHash(); renderList(); });
+  logicSel.addEventListener('change', () => { state.mode = logicSel.value; writeHash(); renderList(); });
+  yearSel.addEventListener('change', () => { state.year = yearSel.value; writeHash(); renderList(); });
+  qInput.addEventListener('input', () => { state.q = qInput.value; writeHash(); renderList(); });
 
-  typeSel.addEventListener('change', () => {
-    state.type = typeSel.value;
-    writeHash(); renderList();
-  });
-
-  modeBtn.addEventListener('click', () => {
-    state.mode = state.mode === 'any' ? 'all' : 'any';
-    modeText.textContent = state.mode.toUpperCase();
-    writeHash(); renderList();
-  });
-
-  clearBtn.addEventListener('click', () => {
+  clearLink.addEventListener('click', (e) => {
+    e.preventDefault();
     state.type = '';
     state.labelsSelected.clear();
     state.mode = 'any';
     state.year = '';
     state.q = '';
     typeSel.value = '';
+    logicSel.value = 'any';
     yearSel.value = '';
     qInput.value = '';
-    modeText.textContent = 'ANY';
     renderChips(); writeHash(); renderList();
   });
 
-  yearSel.addEventListener('change', () => { state.year = yearSel.value; writeHash(); renderList(); });
-  qInput.addEventListener('input', () => { state.q = qInput.value; writeHash(); renderList(); });
-
-  shareBtn.addEventListener('click', async () => {
+  shareLink.addEventListener('click', async (e) => {
+    e.preventDefault();
     writeHash();
     try {
       await navigator.clipboard.writeText(location.href);
-      shareBtn.textContent = 'Link copied!';
-      setTimeout(()=> shareBtn.textContent = 'Copy link', 1200);
+      const saved = shareLink.textContent;
+      shareLink.textContent = 'Link copied!';
+      setTimeout(()=> shareLink.textContent = saved, 1200);
     } catch {}
   });
 })();

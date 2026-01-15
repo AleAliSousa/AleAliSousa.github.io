@@ -1,0 +1,486 @@
+<script type="application/json" id="pubs-data">
+
+[
+  {
+    "title": "Translating time across species: Predicting neuropathologies through comparative lifespan studies",
+    "authors": "Charvet, C. J., & de Sousa, A. A.",
+    "year": 2025,
+    "venue": "Reference Module in Neuroscience and Biobehavioral Psychology (Elsevier)",
+    "doi": "10.1016/B978-0-443-27380-3.00038-5",
+    "url": "https://doi.org/10.1016/B978-0-443-27380-3.00038-5",
+    "type": "review",
+    "labels": ["comparative","lifespan","neurodegeneration"]
+  },
+  {
+    "title": "Same data, different analysts: variation in effect sizes due to analytical decisions in ecology and evolutionary biology",
+    "authors": "Gould, E.; Fraser, H. S.; Parker, T. H.; …; de Sousa, A. A.; …; Zitomer, R. A.",
+    "year": 2025,
+    "venue": "BMC Biology 23:35",
+    "doi": "10.1186/s12915-024-02101-x",
+    "url": "https://doi.org/10.1186/s12915-024-02101-x",
+    "type": "article",
+    "labels": ["methods","meta-research","open-science","statistics","collaboration"]
+  },
+  {
+    "title": "Translating Time: Challenges, Progress, and Future Directions",
+    "authors": "Charvet, C. J.; de Sousa, A. A.; & Vassilopoulos, T.",
+    "year": 2025,
+    "venue": "Brain Research Bulletin, 111212",
+    "doi": "10.1016/j.brainresbull.2025.111212",
+    "url": "https://doi.org/10.1016/j.brainresbull.2025.111212",
+    "type": "review",
+    "labels": ["comparative","lifespan","development"]
+  },
+  {
+    "title": "Participant permanence: Exploring and enhancing experiences of research involvement in UK adults with vision impairment through an Online Participant Engagement Network (OPEN)",
+    "authors": "Roberts-Mills, W.; Richardson, M.; Scheller, M.; Tavoulari, A.; Proulx, M. J.; & de Sousa, A. A.",
+    "year": 2024,
+    "venue": "British Journal of Visual Impairment",
+    "doi": "10.1177/02646196241298203",
+    "url": "https://journals.sagepub.com/doi/10.1177/02646196241298203",
+    "type": "article",
+    "labels": ["visual-impairment","vision","public-engagement","collaboration","human-factors","accessibility"]
+  },
+  {
+    "title": "Thinking on your Feet: enhancing phylogenetic tree learning through a kinaesthetic approach",
+    "authors": "Laurentino, T.; Glover, G.; Scheller, M.; Proulx, M. J.; & de Sousa, A. A.",
+    "year": 2024,
+    "venue": "Evolution: Education and Outreach 17:19",
+    "doi": "10.1186/s12052-024-00215-y",
+    "url": "https://evolution-outreach.biomedcentral.com/articles/10.1186/s12052-024-00215-y",
+    "type": "article",
+    "labels": ["visual-impairment","crossmodal","education","phylogenetics","teaching","public-engagement"]
+  },
+  {
+    "title": "Sociocultural pressures, body satisfaction and self-esteem in congenitally-blind, late-blind and sighted men and women",
+    "authors": "Dell'Erba, S.; Scheller, M.; de Sousa, A. A.; & Proulx, M. J.",
+    "year": 2024,
+    "venue": "Journal of Visual Impairment & Blindness 118(2), 73–84",
+    "doi": "10.1177/0145482X241235167",
+    "url": "https://journals.sagepub.com/doi/10.1177/0145482X241235167",
+    "type": "article",
+    "labels": ["visual-impairment","vision","psychology","wellbeing"]
+  },
+  {
+    "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
+    "authors": "Amunts, K.; …; de Sousa, A. A.; …; et al.",
+    "year": 2024,
+    "venue": "Imaging Neuroscience",
+    "doi": "10.1162/imag_a_00137",
+    "url": "https://doi.org/10.1162/imag_a_00137",
+    "type": "review",
+    "labels": ["digital-neuroscience","neuroinformatics","collaborative science"]
+  },
+  {
+    "title": "Potential factors contributing to observed sex differences in Virtual Reality induced sickness",
+    "authors": "Bannigan, G.; de Sousa, A. A.; Scheller, M.; Finnegan, D. J.; & Proulx, M. J.",
+    "year": 2024,
+    "venue": "Experimental Brain Research",
+    "doi": "10.1007/s00221-023-06760-0",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38170233/",
+    "type": "article",
+    "labels": ["VR","human-factors","sex-differences"]
+  },
+  {
+    "title": "Going beyond established model systems of Alzheimer’s disease: companion animals provide novel insights into the neurobiology of aging",
+    "authors": "de Sousa, A. A.; Rigby-Dames, B. A.; Graff, E. C.; Mohamedelhassan, R.; Vassilopoulos, T.; & Charvet, C. J.",
+    "year": 2023,
+    "venue": "Communications Biology 6:655",
+    "doi": "10.1038/s42003-023-05034-3",
+    "url": "https://www.nature.com/articles/s42003-023-05034-3",
+    "type": "review",
+    "labels": ["neurodegeneration","aging","companion-animals","comparative"]
+  },
+  {
+    "title": "From fossils to mind",
+    "authors": "de Sousa, A. A.; Beaudet, A.; Calvey, T.; Bardo, A.; Benoit, J.; Charvet, C. J.; Dehay, C.; Gómez-Robles, A.; Gunz, P.; Heuer, K.; van den Heuvel, M. P.; Hurst, S.; Lauters, P.; Reed, D.; Salagnon, M.; Sherwood, C. C.; Ströcken, F.; Tawane, M.; Todorov, O. S.; Toro, R.; & Wei, Y.",
+    "year": 2023,
+    "venue": "Communications Biology 6:636",
+    "doi": "10.1038/s42003-023-04803-4",
+    "url": "https://www.nature.com/articles/s42003-023-04803-4",
+    "type": "review",
+    "labels": ["evolution","comparative-neuroanatomy","perspective"]
+  },
+  {
+    "title": "Diversity and evolution of cerebellar folding in mammals",
+    "authors": "Heuer, K.; Traut, N.; de Sousa, A. A.; Valk, S.; Clavel, J.; & Toro, R.",
+    "year": 2023,
+    "venue": "eLife",
+    "doi": "10.7554/eLife.85907",
+    "url": "https://elifesciences.org/articles/85907",
+    "type": "article",
+    "labels": ["evolution","neuroanatomy","cerebellum","mammals"]
+  },
+  {
+    "title": "Differences in office-based personal space perception between British and Korean populations",
+    "authors": "Richardson, M.; Jicol, C.; Taulo, G.; Park, J.; Kim, H. K.; Proulx, M.; & de Sousa, A. A.",
+    "year": 2023,
+    "venue": "Frontiers in Psychology 14",
+    "doi": "10.3389/fpsyg.2023.1043088",
+    "url": "https://doi.org/10.3389/fpsyg.2023.1043088",
+    "type": "article",
+    "labels": ["human-factors","cross-cultural","workspace","architecture"]
+  },
+  {
+    "title": "The effects of social density, spatial density, noise, and office views on perceived personal space in the virtual workplace",
+    "authors": "Jicol, C.; Taulo, G.; Goldie, C.; Esenkaya, T.; Hynes, R.; Paradise, C.; Proulx, M. J.; & de Sousa, A. A.",
+    "year": 2023,
+    "venue": "Frontiers in Computer Science 5",
+    "doi": "10.3389/fcomp.2023.1066881",
+    "url": "https://doi.org/10.3389/fcomp.2023.1066881",
+    "type": "article",
+    "labels": ["virtual-workplace","human-factors","VR","architecture"]
+  },
+  {
+    "title": "Proximate factors in human mate preference: The role of sexual and romantic attraction",
+    "authors": "Scheller, M.; de Sousa, A. A.; Brotto, L. A.; & Little, A. C.",
+    "year": 2023,
+    "venue": "The Journal of Sex Research",
+    "doi": "10.1080/00224499.2023.2176811",
+    "url": "https://doi.org/10.1080/00224499.2023.2176811",
+    "type": "article",
+    "labels": ["psychology","mate-preference","attraction"]
+  },
+  {
+    "title": "Evolutionary and genomic perspectives of brain ageing and neurodegenerative diseases",
+    "authors": "Rigby Dames, B. A.; Kilili, H.; Charvet, C. J.; Díaz-Barba, K.; Proulx, M. J.; de Sousa, A. A.; & Urrutia, A. O.",
+    "year": 2023,
+    "venue": "Progress in Brain Research",
+    "doi": "10.1016/bs.pbr.2022.10.004",
+    "url": "https://doi.org/10.1016/bs.pbr.2022.10.004",
+    "type": "review",
+    "labels": ["neurodegeneration","aging","evolution","genomics"]
+  },
+  {
+    "title": "Evolutionary history of hominin brain size and phylogenetic comparative methods",
+    "authors": "Pestana, C.; de Sousa, A. A.; Todorov, O. S.; Beaudet, A.; & Benoit, J.",
+    "year": 2023,
+    "venue": "Progress in Brain Research 275:217–232",
+    "doi": "10.1016/bs.pbr.2022.12.014",
+    "url": "https://doi.org/10.1016/bs.pbr.2022.12.014",
+    "type": "review",
+    "labels": ["evolution","hominins","phylogenetics"]
+  },
+  {
+    "title": "Down a rabbit hole: Burrowing behaviour and larger home ranges are related to larger brains in Leporids",
+    "authors": "Todorov, O. S.; Weisbecker, V.; de Sousa, A. A.; Kraatz, B.; & Sherratt, E.",
+    "year": 2022,
+    "venue": "Journal of Mammalian Evolution 29:957–967",
+    "doi": "10.1007/s10914-022-09624-6",
+    "url": "https://doi.org/10.1007/s10914-022-09624-6",
+    "type": "article",
+    "labels": ["evolution","mammals","behavior","brain-size"]
+  },
+  {
+    "title": "The evolution of primate short-term memory",
+    "authors": "ManyPrimates; …; de Sousa, A. A.; …",
+    "year": 2022,
+    "venue": "Animal Behavior and Cognition 9(4):428–516",
+    "doi": "10.26451/abc.09.04.06.2022",
+    "url": "https://doi.org/10.26451/abc.09.04.06.2022",
+    "type": "article",
+    "labels": ["primates","cognition","collaboration"]
+  },
+  {
+    "title": "Do we enjoy what we sense and perceive? A dissociation between aesthetic appreciation and basic perception of environmental objects or events",
+    "authors": "Karim, A. K. M. R.; Proulx, M. J.; de Sousa, A. A.; & Likova, L.",
+    "year": 2022,
+    "venue": "Cognitive, Affective, & Behavioral Neuroscience",
+    "doi": "10.3758/s13415-022-01004-0",
+    "url": "https://doi.org/10.3758/s13415-022-01004-0",
+    "type": "article",
+    "labels": ["psychology","aesthetics","perception"]
+  },
+  {
+    "title": "A natural history of vertebrate vision loss: insight from evolution for human visual function",
+    "authors": "de Sousa, A. A.; Todorov, O. S.; & Proulx, M. J.",
+    "year": 2022,
+    "venue": "Neuroscience & Biobehavioral Reviews 134:104550",
+    "doi": "10.1016/j.neubiorev.2022.104550",
+    "url": "https://doi.org/10.1016/j.neubiorev.2022.104550",
+    "type": "review",
+    "labels": ["visual-impairment","vision","evolution"]
+  },
+  {
+    "title": "A Virtual Reality Application of the Rubber Hand Illusion Induced by Ultrasonic Mid‑Air Haptic Stimulation",
+    "authors": "Salagean, A.; Hadnett‑Hunter, J. E.; Finnegan, D.; de Sousa, A. A.; & Proulx, M. J.",
+    "year": 2022,
+    "venue": "ACM Transactions on Applied Perception 19, 1–19",
+    "doi": "10.1145/3487563",
+    "url": "https://doi.org/10.1145/3487563",
+    "type": "article",
+    "labels": ["VR","haptics","rubber-hand-illusion","perception","HCI"]
+  },
+  {
+    "title": "The role of vision in the emergence of mate preferences",
+    "authors": "Scheller, M.; Matorres, F.; Little, T.; Tompkins, L.; & de Sousa, A. A.",
+    "year": 2021,
+    "venue": "Archives of Sexual Behavior",
+    "doi": "10.1007/s10508-020-01901-w",
+    "url": "https://doi.org/10.1007/s10508-020-01901-w",
+    "type": "article",
+    "labels": ["visual-impairment","vision","psychology","mate-preference"]
+  },
+  {
+    "title": "Neuroplasticity and crossmodal connectivity in the normal, healthy brain",
+    "authors": "Karim, A. K. M. R.; Proulx, M. J.; de Sousa, A. A.; & Likova, L. T.",
+    "year": 2021,
+    "venue": "Psychology and Neuroscience",
+    "doi": "10.1037/pne0000258",
+    "url": "https://doi.org/10.1037/pne0000258",
+    "type": "review",
+    "labels": ["plasticity","crossmodal"]
+  },
+  {
+    "title": "Exploring asymmetric roles in mixed‑ability gaming",
+    "authors": "Gonçalves, D.; Rodrigues, A.; Richardson, M. L.; de Sousa, A. A.; Proulx, M. J.; & Guerreiro, T.",
+    "year": 2021,
+    "venue": "CHI '21 — Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+    "doi": "",
+    "url": "https://doi.org/10.1145/3411764.3445494",
+    "type": "article",
+    "labels": ["visual-impairment","accessibility","gaming","HCI","vision"]
+  },
+  {
+    "title": "evALLution: making basic evolution concepts accessible to blind people through a multisensory tree of life",
+    "authors": "Laurentino, T. G.; Xavier, M.; Ronco, F.; Domingues, I.; Penha, B.; Dias, M.; de Sousa, A. A.; …; Botelho, R.",
+    "year": 2021,
+    "venue": "Evolution: Education and Outreach 14:5, 1–14",
+    "doi": "10.1186/s12052-021-00143-1",
+    "url": "https://doi.org/10.1186/s12052-021-00143-1",
+    "type": "article",
+    "labels": ["visual-impairment","education","vision","accessibility","public-engagement"]
+  },
+  {
+    "title": "Visual‑to‑auditory sensory substitution alters language asymmetry in both sighted novices and experienced visually impaired users",
+    "authors": "Proulx, M. J.; Brown, D. J.; Lloyd‑Esenkaya, T.; Leveson, J. B.; Todorov, O. S.; Watson, S. H.; & de Sousa, A. A.",
+    "year": 2020,
+    "venue": "Applied Ergonomics 85:103072",
+    "doi": "10.1016/j.apergo.2020.103072",
+    "url": "https://doi.org/10.1016/j.apergo.2020.103072",
+    "type": "article",
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","lateralization","vision","ergonomics","HCI"]
+  },
+  {
+    "title": "Primate hippocampus size and organization are predicted by sociality but not diet",
+    "authors": "Todorov, O. S.; Weisbecker, V.; de Sousa, A. A.; Kraatz, B.; & Sherratt, E.",
+    "year": 2019,
+    "venue": "Proceedings of the Royal Society B 286(1914):20191712",
+    "doi": "10.1098/rspb.2019.1712",
+    "url": "https://doi.org/10.1098/rspb.2019.1712",
+    "type": "article",
+    "labels": ["primates","hippocampus","social-behavior","evolution"]
+  },
+  {
+    "title": "The right way to kiss: directionality bias in head‑turning during kissing",
+    "authors": "Karim, A. K. M. R.; Proulx, M. J.; de Sousa, A. A.; Karmaker, C.; Rahman, A.; Karim, F.; & Nigar, N.",
+    "year": 2017,
+    "venue": "Scientific Reports 7(1):5398",
+    "doi": "10.1038/s41598-017-04942-9",
+    "url": "https://doi.org/10.1038/s41598-017-04942-9",
+    "type": "article",
+    "labels": ["psychology","social-behavior","laterality"]
+  },
+  {
+    "title": "Neocortex expansion is linked to size variations in gene families with chemotaxis, cell–cell signalling and immune response functions in mammals",
+    "authors": "Castillo‑Morales, A.; Monzón‑Sandoval, J.; de Sousa, A. A.; Urrutia, A. O.; & Gutierrez, H.",
+    "year": 2016,
+    "venue": "Open Biology 6",
+    "doi": "10.1098/rsob.160132",
+    "url": "https://doi.org/10.1098/rsob.160132",
+    "type": "article",
+    "labels": ["genomics","evolution","neocortex"]
+  },
+  {
+    "title": "Where am I? Who am I? The Relation Between Spatial Cognition, Social Cognition and Individual Differences in the Built Environment",
+    "authors": "Proulx, M. J.; Todorov, O. S.; Taylor Aiken, A.; & de Sousa, A. A.",
+    "year": 2016,
+    "venue": "Frontiers in Psychology 7",
+    "doi": "10.3389/fpsyg.2016.00064",
+    "url": "https://doi.org/10.3389/fpsyg.2016.00064",
+    "type": "article",
+    "labels": ["cognition","environment","crossmodal","architecture"]
+  },
+  {
+    "title": "Other ways of seeing: From behavior to neural mechanisms in the online visual control of action with sensory substitution",
+    "authors": "Proulx, M. J.; Gwinnutt, J.; Dell'Erba, S.; Levy‑Tzedek, S.; de Sousa, A. A.; & Brown, D. J.",
+    "year": 2015,
+    "venue": "Restorative Neurology and Neuroscience 34(1):29–44",
+    "doi": "10.3233/RNN-150541",
+    "url": "http://dx.doi.org/10.3233/RNN-150541",
+    "type": "review",
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","action-control"]
+  },
+  {
+    "title": "There or not there? A multidisciplinary review and research agenda on the impact of transparent barriers on human perception, action, and social behavior",
+    "authors": "Marquardt, G.; Cross, E. S.; de Sousa, A. A.; Edelstein, E.; Farnè, A.; Leszczynski, M.; Patterson, M.; & Quadflieg, S.",
+    "year": 2015,
+    "venue": "Frontiers in Psychology 6:1381",
+    "doi": "10.3389/fpsyg.2015.01381",
+    "url": "https://doi.org/10.3389/fpsyg.2015.01381",
+    "type": "review",
+    "labels": ["perception","crossmodal","personal-space","architecture"]
+  },
+  {
+    "title": "What can volumes reveal about human brain evolution? A framework for bridging behavioral, histometric, and volumetric perspectives",
+    "authors": "de Sousa, A. A.; & Proulx, M. J.",
+    "year": 2014,
+    "venue": "Frontiers in Neuroanatomy 8:51",
+    "doi": "10.3389/fnana.2014.00051",
+    "url": "https://doi.org/10.3389/fnana.2014.00051",
+    "type": "review",
+    "labels": ["evolution","neuroanatomy","methods"]
+  },
+  {
+    "title": "Lamination of the lateral geniculate nucleus in catarrhine primates",
+    "authors": "de Sousa, A. A.; Sherwood, C. C.; Hof, P. R.; & Zilles, K.",
+    "year": 2013,
+    "venue": "Brain, Behavior and Evolution 81(2):93–108",
+    "doi": "10.1159/000346495",
+    "url": "https://doi.org/10.1159/000346495",
+    "type": "article",
+    "labels": ["neuroanatomy","primates","LGN"]
+  },
+  {
+    "title": "Variable temporo‑insular cortex neuroanatomy in primates suggests a bottleneck effect in eastern gorillas",
+    "authors": "Barks, S. K.; Bauernfeind, A. L.; Bonar, C. J.; Cranfield, M. R.; de Sousa, A. A.; …; Sherwood, C. C.",
+    "year": 2013,
+    "venue": "Journal of Comparative Neurology",
+    "doi": "10.1002/cne.23448",
+    "url": "https://doi.org/10.1002/cne.23448",
+    "type": "article",
+    "labels": ["neuroanatomy","primates","cortex"]
+  },
+  {
+    "title": "A volumetric comparison of the insular cortex and its subregions in primates",
+    "authors": "Bauernfeind, A. L.; de Sousa, A. A.; Avasthi, T.; Dobson, S. D.; Raghanti, M. A.; Lewandowski, A. H.; Zilles, K.; Semendeferi, K.; Allman, J. M.; Craig, A. D.; Hof, P. R.; & Sherwood, C. C.",
+    "year": 2013,
+    "venue": "Journal of Human Evolution",
+    "doi": "10.1016/j.jhevol.2012.12.003",
+    "url": "https://doi.org/10.1016/j.jhevol.2012.12.003",
+    "type": "article",
+    "labels": ["neuroanatomy","primates","insula"]
+  },
+  {
+    "title": "Hominins and the emergence of the modern human brain",
+    "authors": "de Sousa, A. A.; & Cunha, E.",
+    "year": 2012,
+    "venue": "Progress in Brain Research 195, 293–322",
+    "doi": "10.1016/B978-0-444-53860-4.00014-3",
+    "url": "https://doi.org/10.1016/B978-0-444-53860-4.00014-3",
+    "type": "review",
+    "labels": ["evolution","hominins","anthropology"]
+  },
+  {
+    "title": "Hominoid visual brain structure volumes and the position of the lunate sulcus",
+    "authors": "de Sousa, A. A.; Sherwood, C. C.; Mohlberg, H.; Amunts, K.; Schleicher, A.; MacLeod, C. E.; Hof, P. R.; Frahm, H.; & Zilles, K.",
+    "year": 2010,
+    "venue": "Journal of Human Evolution 58, 281–292",
+    "doi": "10.1016/j.jhevol.2009.11.011",
+    "url": "http://dx.doi.org/10.1016/j.jhevol.2009.11.011",
+    "type": "article",
+    "labels": ["neuroanatomy","hominoids","visual-cortex"]
+  },
+  {
+    "title": "Comparative cytoarchitectural analyses of striate and extrastriate areas in hominoids",
+    "authors": "de Sousa, A. A.; Sherwood, C. C.; Schleicher, A.; Hof, P. R.; Amunts, K.; MacLeod, C. E.; & Zilles, K.",
+    "year": 2010,
+    "venue": "Cerebral Cortex 20:966–981",
+    "doi": "10.1093/cercor/bhp158",
+    "url": "https://doi.org/10.1093/cercor/bhp158",
+    "type": "article",
+    "labels": ["neuroanatomy","hominoids","histology","visual-cortex"]
+  },
+  {
+    "title": "Scaling of inhibitory interneurons in areas V1 and V2 of anthropoid primates as revealed by calcium‑binding protein immunohistochemistry",
+    "authors": "Sherwood, C. C.; Raghanti, M. A.; Stimpson, C. D.; Bonar, C. J.; de Sousa, A. A.; Preuss, T. M.; & Hof, P. R.",
+    "year": 2007,
+    "venue": "Brain, Behavior and Evolution 69, 176–195",
+    "doi": "10.1159/000096986",
+    "url": "https://doi.org/10.1159/000096986",
+    "type": "article",
+    "labels": ["neuroanatomy","primates","interneurons","visual-cortex"]
+  },
+  {
+    "title": "Whole mtDNA genome sequence analysis of ancient African lineages",
+    "authors": "Gonder, M. K.; Mortensen, H. M.; Reed, F. A.; de Sousa, A. A.; & Tishkoff, S. A.",
+    "year": 2007,
+    "venue": "Molecular Biology and Evolution 24, 757–768",
+    "doi": "10.1093/molbev/msl209",
+    "url": "https://doi.org/10.1093/molbev/msl209",
+    "type": "article",
+    "labels": ["genetics","mtDNA","human-origins","anthropology"]
+  },
+  {
+    "title": "Evolution of the Occipital Lobe",
+    "authors": "Todorov, O. S.; & de Sousa, A. A.",
+    "year": 2018,
+    "venue": "In Bruner E., Ogihara N., & Tanabe H. C. (eds) Digital Endocasts: From Skulls to Brains. Springer, Tokyo, pp. 259–273",
+    "doi": "10.1007/978-4-431-56582-6_17",
+    "url": "https://doi.org/10.1007/978-4-431-56582-6_17",
+    "type": "book-chapter",
+    "labels": ["evolution","neuroanatomy","occipital-lobe"]
+  },
+  {
+    "title": "The hominin fossil record and the emergence of the modern human central nervous system",
+    "authors": "de Sousa, A. A.; & Wood, B. A.",
+    "year": 2007,
+    "venue": "In Preuss T. M. & Kaas J. H. (eds), The Evolution of Primate Nervous Systems, Vol. 4. Academic Press: Oxford, pp. 291–336",
+    "doi": "10.1016/B0-12-370878-8/00018-5",
+    "url": "https://doi.org/10.1016/B0-12-370878-8/00018-5",
+    "type": "book-chapter",
+    "labels": ["evolution","hominins","neuroanatomy"]
+  },
+  {
+    "title": "Mate Preferences",
+    "authors": "de Sousa, A. A.; & Scheller, M.",
+    "year": 2023,
+    "venue": "Encyclopedia of Sexual Psychology and Behavior, Springer Nature",
+    "doi": "10.1007/978-3-031-08956-5_893-1",
+    "url": "https://link.springer.com/referenceworkentry/10.1007/978-3-031-08956-5_893-1",
+    "type": "encyclopedia-entry",
+    "labels": ["psychology","mate-preference"]
+  },
+  {
+    "title": "Human Visual Neurobiology",
+    "authors": "Haas, J.; Hass, R.; Spocter, M. A.; & de Sousa, A. A.",
+    "year": 2020,
+    "venue": "Encyclopedia of Evolutionary Psychological Science, Springer Nature",
+    "doi": "10.1007/978-3-319-16999-6_2768-1",
+    "url": "https://doi.org/10.1007/978-3-319-16999-6_2768-1",
+    "type": "encyclopedia-entry",
+    "labels": ["vision","neuroanatomy","encyclopedia"]
+  },
+  {
+    "title": "BOOK REVIEW: The Neanderthals (Müller & Schrenk, 2008). Routledge",
+    "authors": "de Sousa, A. A.",
+    "year": 2011,
+    "venue": "Palarch’s Journal of Vertebrate Palaeontology",
+    "doi": "",
+    "url": "",
+    "type": "book-review",
+    "labels": ["anthropology","neanderthals"]
+  },
+  {
+    "title": "From Fossils to Mind",
+    "authors": "Calvey, T.; de Sousa, A. A.; & Beaudet, A. (Eds.)",
+    "year": 2023,
+    "venue": "Progress in Brain Research. Elsevier. ISBN: 9780323991070",
+    "doi": "",
+    "url": "https://www.elsevier.com/books/from-fossils-to-mind/calvey/978-0-323-99107-0",
+    "type": "edited-volume",
+    "labels": ["evolution","museums","open-science","anthropology","collaboration"]
+  },
+  {
+    "title": "Hominoid brain organization: Histometric and morphometric comparisons of visual brain structures",
+    "authors": "de Sousa, A. A.",
+    "year": 2008,
+    "venue": "PhD Dissertation, The George Washington University",
+    "doi": "",
+    "url": "",
+    "type": "dissertation",
+    "labels": ["hominoids","histology","visual-cortex","anthropology","neuroanatomy"]
+  }
+
+]
+</script>

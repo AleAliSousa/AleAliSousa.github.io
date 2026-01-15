@@ -163,11 +163,163 @@
       </div>
     </section>
 
+<!-- Start publications section placeholder -->   
+<section class="card" id="publications">
+  <h2>Publications</h2>
+
+  <!-- FILTERS -->
+  <div id="pubFilters" class="card" style="margin-bottom:20px;">
+    <div class="controls" id="pub-filter-controls">
+      <label for="pubType">Type:</label>
+      <select id="pubType"><option value="">All types</option></select>
+
+      <label for="pubYear">Year:</label>
+      <select id="pubYear"><option value="">All years</option></select>
+
+      <label for="pubLogic">Label logic:</label>
+      <select id="pubLogic">
+        <option value="any">ANY</option>
+        <option value="all">ALL</option>
+      </select>
+
+      <label for="pubSearch">Search:</label>
+      <input type="search" id="pubSearch" placeholder="Title / authors / venue…" />
+    </div>
+
+    <div style="margin-top:12px; font-weight:600;">Labels:</div>
+    <div class="chips" id="pubLabelChips"></div>
+
+    <div class="links" style="margin-top:12px;">
+      #Clear</a>
+      #Copy link</a>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="pubResults" class="card">
+    <div id="pubList"></div>
+    <div id="pubEmpty" class="empty" hidden>No publications match your filters.</div>
+  </div>
+</section>
+<!-- ⚙️ End publications section placeholder -->       
+    
     <footer>
       © <span id="year"></span> Alexandra A. de Sousa
     </footer>
   </div>
+<!-- Paste your Publication Script between these tags -->
 
+<script>
+// Load publications from external JSON
+fetch('data/publications.json', { cache:'no-store' })
+  .then(r => r.json())
+  .then(initPublications)
+  .catch(err => {
+    console.error(err);
+    document.querySelector('#pubResults').innerHTML =
+      '<p style="color:#b00">Could not load publications.json</p>';
+  });
+
+function initPublications(data){
+  const norm = s => (s||'').toString().trim().replace(/\s+/g,' ').toLowerCase();
+  const typeSel  = document.getElementById('pubType');
+  const yearSel  = document.getElementById('pubYear');
+  const logicSel = document.getElementById('pubLogic');
+  const searchEl = document.getElementById('pubSearch');
+  const chipBox  = document.getElementById('pubLabelChips');
+  const listEl   = document.getElementById('pubList');
+  const emptyEl  = document.getElementById('pubEmpty');
+  const clearLink= document.getElementById('pubClear');
+  const shareLink= document.getElementById('pubShare');
+
+  // Normalize
+  const labelDisplay = new Map();
+  const typeDisplay  = new Map();
+  data.forEach(p=>{
+    p.labels = (p.labels||[]).map(l=>{
+      const n = norm(l);
+      if (!labelDisplay.has(n)) labelDisplay.set(n, l.toString().trim());
+      return n;
+    });
+    const n = norm(p.type||'other');
+    p.typeNorm = n;
+    if (!typeDisplay.has(n)) typeDisplay.set(n, p.type||'Other');
+  });
+
+  const labelKeys = Array.from(new Set(data.flatMap(p=>p.labels))).sort();
+  const types = Array.from(new Set(data.map(p=>p.typeNorm))).sort();
+  const years = Array.from(new Set(data.map(p=>p.year))).sort((a,b)=>b-a);
+
+  // Fill selects
+  types.forEach(t => typeSel.insertAdjacentHTML('beforeend', `<option value="${t}">${typeDisplay.get(t)}</option>`));
+  years.forEach(y => yearSel.insertAdjacentHTML('beforeend', `<option value="${y}">${y}</option>`));
+
+  // State
+  const state = { type:'', labels:new Set(), mode:'any', year:'', q:'' };
+
+  function renderChips(){
+    chipBox.innerHTML = labelKeys.map(k=>{
+      const active = state.labels.has(k) ? 'active':'';
+      return `<button class="chip ${active}" data-key="${k}">${labelDisplay.get(k)}</button>`;
+    }).join('');
+  }
+
+  function matches(p){
+    const typeOK = state.type ? p.typeNorm===state.type : true;
+    const yearOK = state.year ? p.year==state.year : true;
+    const q = state.q.toLowerCase();
+    const text = (p.title+' '+p.authors+' '+p.venue).toLowerCase();
+    const qOK = q ? text.includes(q) : true;
+
+    const sel = Array.from(state.labels);
+    const have = new Set(p.labels);
+    const labelsOK = sel.length===0 ?
+      true :
+      state.mode==='any'
+        ? sel.some(t=>have.has(t))
+        : sel.every(t=>have.has(t));
+
+    return typeOK && yearOK && qOK && labelsOK;
+  }
+
+  function render(){
+    const items = data.filter(matches).sort((a,b)=>b.year-a.year);
+    listEl.innerHTML = items.map(p=>{
+      const doi = p.doi ? ` — DOI: https://doi.org/${p.doi}` : '';
+      const labels = p.labels.map(k=>`<span class="label">${labelDisplay.get(k)}</span>`).join('');
+      return `
+        <article class="pub">
+          <div class="title">${p.url ? `${p.url}${p.title}</a>` : p.title}
+            <span class="type-badge">${typeDisplay.get(p.typeNorm)}</span>
+          </div>
+          <div class="meta">${p.authors} (${p.year}) — ${p.venue}${doi}</div>
+          <div class="label-list">${labels}</div>
+        </article>
+      `;
+    }).join('');
+
+    emptyEl.hidden = items.length>0;
+  }
+
+  // Event wiring
+  chipBox.addEventListener('click', e=>{
+    const b=e.target.closest('.chip'); if(!b) return;
+    const k = b.dataset.key;
+    if(state.labels.has(k)) state.labels.delete(k); else state.labels.add(k);
+    renderChips();
+    render();
+  });
+
+  typeSel.addEventListener('change', ()=>{ state.type = typeSel.value; render(); });
+  yearSel.addEventListener('change', ()=>{ state.year = yearSel.value; render(); });
+  logicSel.addEventListener('change',()=>{ state.mode = logicSel.value; render(); });
+  searchEl.addEventListener('input',()=>{ state.q = searchEl.value; render(); });
+
+  renderChips();
+  render();
+}
+</script>
+<!-- ⚙️ LOGIC Publication Script -->   
   <script>
     // Keep the year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();

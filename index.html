@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +76,28 @@
     }
     .tag:hover { background: #f0f6ff; }
 
+    /* Publications section UI */
+    .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
+    .controls label { font-weight: 600 }
+    select, input[type="search"] { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px }
+
+    .links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
+    .link { color: var(--accent-dark); text-decoration: underline; cursor: pointer }
+    .link:hover { color: var(--accent) }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--accent-dark); padding: 6px 10px; cursor: pointer; font-weight: 600 }
+    .chip.active { background: #eef4ff; color: #0a3d7a; border-color: #d6e6ff }
+
+    .pub { border-bottom: 1px solid var(--border); padding: 14px 0 }
+    .pub:last-child { border-bottom: 0 }
+    .pub .title { font-weight: 700 }
+    .pub .meta { color: var(--muted); font-size: .95rem }
+    .label-list { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px }
+    .label { font-size: .8rem; border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; color: var(--accent-dark); background: #fff }
+    .type-badge { margin-left: 6px; font-size: .75rem; background: #f3f6fb; border: 1px solid #d9e4f5; border-radius: 6px; padding: 2px 6px; color: #084f96 }
+    .empty { color: var(--muted); text-align: center; padding: 20px }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -102,229 +125,302 @@
         <a class="btn" href="https://github.com/AleAliSousa?tab=repositories" target="_blank" rel="noopener">GitHub Repositories</a>
       </div>
       <div class="link-row">
-        <!-- Replace the # with your actual profile URLs -->
-        <a class="tag" href="https://x.com/AleAliSousa" target="_blank" rel="noopener">BlueSky</a>
+        <a class="tag" href="https://x.com/AleAliSousa" target="_blank" rel="noopener">Twitter/X</a>
         <a class="tag" href="https://www.linkedin.com/in/alexandra-allison-de-sousa-87784b2/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="tag" href="https://bsky.app/profile/alealisousa.bsky.social" target="_blank" rel="noopener">Twitter/X</a>
+        <a class="tag" href="https://bsky.app/profile/alealisousa.bsky.social" target="_blank" rel="noopener">BlueSky</a>
       </div>
     </section>
 
-    <!-- Featured projects pulled from CV -->
+    <!-- Featured projects -->
     <section class="card">
       <h2>Featured Projects</h2>
       <div class="grid">
         <div class="card">
           <h3>MiMe: Microscopy Metadata Index</h3>
-          <p>
-            A centralized platform for researchers to discover, contribute, and manage histological metadata entries in MongoDB.
-          </p>
+          <p>A centralized platform for researchers to discover, contribute, and manage histological metadata entries in MongoDB.</p>
           <a class="btn" href="https://mime.connect-project.io/" target="_blank" rel="noopener">Open MIME</a>
         </div>
 
         <div class="card">
           <h3>ShinierBrains</h3>
-          <p>
-            Interactive web app to calculate encephalization and visualise data in Shiny.
-          </p>
+          <p>Interactive web app to calculate encephalization and visualise data in Shiny.</p>
           <a class="btn" href="https://3zqqmj-alexandra0allison-de0sousa.shinyapps.io/ShinierBrains/" target="_blank" rel="noopener">Open ShinierBrains</a>
         </div>
 
         <div class="card">
           <h3>The Integrative Biology of Brain Evolution (TIBBE)</h3>
-          <p>
-            Special Topic Network on The Integrative Biology of Brain Evolution.
-          </p>
+          <p>Special Topic Network on The Integrative Biology of Brain Evolution.</p>
           <a class="btn" href="https://tibbe-network.github.io" target="_blank" rel="noopener">Visit TIBBE</a>
         </div>
 
         <div class="card">
           <h3>OPEN — VIR</h3>
-          <p>
-            Online Engagement Participation Network (OPEN) for Visual Impairment Research.
-          </p>
+          <p>Online Engagement Participation Network (OPEN) for Visual Impairment Research.</p>
           <a class="btn" href="https://sites.google.com/view/open-vi-research" target="_blank" rel="noopener">Visit OPEN VIR</a>
         </div>
 
-       <div class="card">
+        <div class="card">
           <h3>European Network for Brain Evolution Research (ENBER)</h3>
-          <p>
-            International evolutionary neuroscience mailing list and resources.
-          </p>
+          <p>International evolutionary neuroscience mailing list and resources.</p>
           <a class="btn" href="http://sites.google.com/site/eurobrainevolnet/" target="_blank" rel="noopener">Visit ENBER</a>
         </div>
 
         <div class="card">
           <h3>Brain Evolution in the News</h3>
-          <p>
-            Public engagement blog and vodcast about brain evolution.
-          </p>
+          <p>Public engagement blog and vodcast about brain evolution.</p>
           <a class="btn" href="https://brainevolutionnews.blogspot.com" target="_blank" rel="noopener">Read the Blog</a>
         </div>
       </div>
     </section>
 
-<!-- Start publications section placeholder -->   
-<section class="card" id="publications">
-  <h2>Publications</h2>
+    <!-- Publications (embedded) -->
+    <section class="card" id="publications">
+      <h2>Publications</h2>
 
-  <!-- FILTERS -->
-  <div id="pubFilters" class="card" style="margin-bottom:20px;">
-    <div class="controls" id="pub-filter-controls">
-      <label for="pubType">Type:</label>
-      <select id="pubType"><option value="">All types</option></select>
+      <div id="pubFilters" class="card" style="margin-bottom:20px;">
+        <div class="controls" id="pub-filter-controls">
+          <label for="pubType">Type:</label>
+          <select id="pubType"><option value="">All types</option></select>
 
-      <label for="pubYear">Year:</label>
-      <select id="pubYear"><option value="">All years</option></select>
+          <label for="pubYear">Year:</label>
+          <select id="pubYear"><option value="">All years</option></select>
 
-      <label for="pubLogic">Label logic:</label>
-      <select id="pubLogic">
-        <option value="any">ANY</option>
-        <option value="all">ALL</option>
-      </select>
+          <label for="pubLogic">Label logic:</label>
+          <select id="pubLogic">
+            <option value="any">ANY</option>
+            <option value="all">ALL</option>
+          </select>
 
-      <label for="pubSearch">Search:</label>
-      <input type="search" id="pubSearch" placeholder="Title / authors / venue…" />
-    </div>
+          <label for="pubSearch">Search:</label>
+          <input type="search" id="pubSearch" placeholder="Title / authors / venue…" />
+        </div>
 
-    <div style="margin-top:12px; font-weight:600;">Labels:</div>
-    <div class="chips" id="pubLabelChips"></div>
+        <div style="margin-top:12px; font-weight:600;">Labels:</div>
+        <div class="chips" id="pubLabelChips"></div>
 
-    <div class="links" style="margin-top:12px;">
-      #Clear</a>
-      #Copy link</a>
-    </div>
-  </div>
+        <div class="links">
+          <a id="pubClear" class="link" href="#">Clear</a>
+          <a id="pubShare" class="link" href="#">Copy link</a>
+        </div>
+      </div>
 
-  <!-- RESULTS -->
-  <div id="pubResults" class="card">
-    <div id="pubList"></div>
-    <div id="pubEmpty" class="empty" hidden>No publications match your filters.</div>
-  </div>
-</section>
-<!-- ⚙️ End publications section placeholder -->       
-    
+      <div id="pubResults" class="card">
+        <div id="pubList"></div>
+        <div id="pubEmpty" class="empty" hidden>No publications match your filters.</div>
+      </div>
+    </section>
+
     <footer>
       © <span id="year"></span> Alexandra A. de Sousa
     </footer>
   </div>
-<!-- Paste your Publication Script between these tags -->
 
-<script>
-// Load publications from external JSON
-fetch('data/publications.json', { cache:'no-store' })
-  .then(r => r.json())
-  .then(initPublications)
-  .catch(err => {
-    console.error(err);
-    document.querySelector('#pubResults').innerHTML =
-      '<p style="color:#b00">Could not load publications.json</p>';
-  });
-
-function initPublications(data){
-  const norm = s => (s||'').toString().trim().replace(/\s+/g,' ').toLowerCase();
-  const typeSel  = document.getElementById('pubType');
-  const yearSel  = document.getElementById('pubYear');
-  const logicSel = document.getElementById('pubLogic');
-  const searchEl = document.getElementById('pubSearch');
-  const chipBox  = document.getElementById('pubLabelChips');
-  const listEl   = document.getElementById('pubList');
-  const emptyEl  = document.getElementById('pubEmpty');
-  const clearLink= document.getElementById('pubClear');
-  const shareLink= document.getElementById('pubShare');
-
-  // Normalize
-  const labelDisplay = new Map();
-  const typeDisplay  = new Map();
-  data.forEach(p=>{
-    p.labels = (p.labels||[]).map(l=>{
-      const n = norm(l);
-      if (!labelDisplay.has(n)) labelDisplay.set(n, l.toString().trim());
-      return n;
-    });
-    const n = norm(p.type||'other');
-    p.typeNorm = n;
-    if (!typeDisplay.has(n)) typeDisplay.set(n, p.type||'Other');
-  });
-
-  const labelKeys = Array.from(new Set(data.flatMap(p=>p.labels))).sort();
-  const types = Array.from(new Set(data.map(p=>p.typeNorm))).sort();
-  const years = Array.from(new Set(data.map(p=>p.year))).sort((a,b)=>b-a);
-
-  // Fill selects
-  types.forEach(t => typeSel.insertAdjacentHTML('beforeend', `<option value="${t}">${typeDisplay.get(t)}</option>`));
-  years.forEach(y => yearSel.insertAdjacentHTML('beforeend', `<option value="${y}">${y}</option>`));
-
-  // State
-  const state = { type:'', labels:new Set(), mode:'any', year:'', q:'' };
-
-  function renderChips(){
-    chipBox.innerHTML = labelKeys.map(k=>{
-      const active = state.labels.has(k) ? 'active':'';
-      return `<button class="chip ${active}" data-key="${k}">${labelDisplay.get(k)}</button>`;
-    }).join('');
-  }
-
-  function matches(p){
-    const typeOK = state.type ? p.typeNorm===state.type : true;
-    const yearOK = state.year ? p.year==state.year : true;
-    const q = state.q.toLowerCase();
-    const text = (p.title+' '+p.authors+' '+p.venue).toLowerCase();
-    const qOK = q ? text.includes(q) : true;
-
-    const sel = Array.from(state.labels);
-    const have = new Set(p.labels);
-    const labelsOK = sel.length===0 ?
-      true :
-      state.mode==='any'
-        ? sel.some(t=>have.has(t))
-        : sel.every(t=>have.has(t));
-
-    return typeOK && yearOK && qOK && labelsOK;
-  }
-
-  function render(){
-    const items = data.filter(matches).sort((a,b)=>b.year-a.year);
-    listEl.innerHTML = items.map(p=>{
-      const doi = p.doi ? ` — DOI: https://doi.org/${p.doi}` : '';
-      const labels = p.labels.map(k=>`<span class="label">${labelDisplay.get(k)}</span>`).join('');
-      return `
-        <article class="pub">
-          <div class="title">${p.url ? `${p.url}${p.title}</a>` : p.title}
-            <span class="type-badge">${typeDisplay.get(p.typeNorm)}</span>
-          </div>
-          <div class="meta">${p.authors} (${p.year}) — ${p.venue}${doi}</div>
-          <div class="label-list">${labels}</div>
-        </article>
-      `;
-    }).join('');
-
-    emptyEl.hidden = items.length>0;
-  }
-
-  // Event wiring
-  chipBox.addEventListener('click', e=>{
-    const b=e.target.closest('.chip'); if(!b) return;
-    const k = b.dataset.key;
-    if(state.labels.has(k)) state.labels.delete(k); else state.labels.add(k);
-    renderChips();
-    render();
-  });
-
-  typeSel.addEventListener('change', ()=>{ state.type = typeSel.value; render(); });
-  yearSel.addEventListener('change', ()=>{ state.year = yearSel.value; render(); });
-  logicSel.addEventListener('change',()=>{ state.mode = logicSel.value; render(); });
-  searchEl.addEventListener('input',()=>{ state.q = searchEl.value; render(); });
-
-  renderChips();
-  render();
-}
-</script>
-<!-- ⚙️ LOGIC Publication Script -->   
   <script>
-    // Keep the year current automatically
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // -------- Publications loader + UI --------
+    fetch('data/publications.json', { cache:'no-store' })
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to load publications.json');
+        return r.json();
+      })
+      .then(initPublications)
+      .catch(err => {
+        console.error(err);
+        document.querySelector('#pubResults').innerHTML =
+          '<p style="color:#b00">Could not load publications.json</p>';
+      });
+
+    function initPublications(data){
+      const norm = s => (s||'').toString().trim().replace(/\s+/g,' ').toLowerCase();
+
+      const typeSel  = document.getElementById('pubType');
+      const yearSel  = document.getElementById('pubYear');
+      const logicSel = document.getElementById('pubLogic');
+      const searchEl = document.getElementById('pubSearch');
+      const chipBox  = document.getElementById('pubLabelChips');
+      const listEl   = document.getElementById('pubList');
+      const emptyEl  = document.getElementById('pubEmpty');
+      const clearLink= document.getElementById('pubClear');
+      const shareLink= document.getElementById('pubShare');
+
+      // Normalize labels & type, capture display casing
+      const labelDisplay = new Map();
+      const typeDisplay  = new Map();
+
+      data.forEach(p => {
+        const labs = Array.isArray(p.labels) ? p.labels : [];
+        p.labels = labs.map(l => {
+          const n = norm(l);
+          if (n && !labelDisplay.has(n)) labelDisplay.set(n, l.toString().trim());
+          return n;
+        }).filter(Boolean);
+
+        const rawType = (p.type ?? '').toString().trim();
+        const t = norm(rawType) || 'other';
+        p.typeNorm = t;
+        if (!typeDisplay.has(t)) typeDisplay.set(t, rawType || 'Other');
+      });
+
+      // Facets
+      const labelKeys = Array.from(new Set(data.flatMap(p => p.labels))).sort((a,b)=>a.localeCompare(b));
+      const types     = Array.from(new Set(data.map(p => p.typeNorm))).sort((a,b)=>a.localeCompare(b));
+      const years     = Array.from(new Set(data.map(p => p.year))).sort((a,b)=>b-a);
+
+      // Populate selects
+      types.forEach(t => typeSel.insertAdjacentHTML('beforeend', `<option value="${t}">${typeDisplay.get(t) || t}</option>`));
+      years.forEach(y => yearSel.insertAdjacentHTML('beforeend', `<option value="${y}">${y}</option>`));
+
+      // State & hash sync
+      const state = { type:'', labels:new Set(), mode:'any', year:'', q:'' };
+
+      function restoreFromHash(){
+        const h = new URLSearchParams(location.hash.replace(/^#/, ''));
+        state.type = (h.get('type') || '').toLowerCase();
+        state.mode = (h.get('mode')==='all') ? 'all' : 'any';
+        state.year = h.get('year') || '';
+        state.q    = h.get('q') || '';
+        const tags = (h.get('tags') || '').split(',').map(t=>t.trim().toLowerCase()).filter(Boolean);
+        state.labels = new Set(tags);
+
+        if (!types.includes(state.type)) state.type = '';
+
+        typeSel.value  = state.type;
+        logicSel.value = state.mode;
+        yearSel.value  = state.year;
+        searchEl.value = state.q;
+      }
+
+      function buildHash(){
+        const h = new URLSearchParams();
+        if (state.type) h.set('type', state.type);
+        if (state.labels.size) h.set('tags', Array.from(state.labels).join(','));
+        if (state.mode==='all') h.set('mode', 'all');
+        if (state.year) h.set('year', state.year);
+        if (state.q) h.set('q', state.q);
+        return h.toString() ? '#'+h.toString() : '';
+      }
+
+      function writeHash(){
+        history.replaceState(null, '', buildHash());
+      }
+
+      function renderChips(){
+        chipBox.innerHTML = labelKeys.map(k=>{
+          const active = state.labels.has(k) ? 'active' : '';
+          const text = labelDisplay.get(k) || k;
+          return `<button class="chip ${active}" data-key="${k}" aria-pressed="${active? 'true':'false'}">${text}</button>`;
+        }).join('') || '<span class="meta" style="color:#666">No labels found in data.</span>';
+      }
+
+      function matches(p){
+        const typeOK = state.type ? p.typeNorm === state.type : true;
+        const yearOK = state.year ? String(p.year) === String(state.year) : true;
+
+        const q = state.q.trim().toLowerCase();
+        const text = (p.title + ' ' + p.authors + ' ' + (p.venue||'')).toLowerCase();
+        const qOK = q ? text.includes(q) : true;
+
+        const sel = Array.from(state.labels);
+        const have = new Set(p.labels);
+        const labelsOK = sel.length === 0
+          ? true
+          : (state.mode === 'any'
+              ? sel.some(t => have.has(t))
+              : sel.every(t => have.has(t)));
+
+        return typeOK && yearOK && qOK && labelsOK;
+      }
+
+      function render(){
+        const items = data.filter(matches).sort((a,b)=> b.year - a.year || a.title.localeCompare(b.title));
+
+        listEl.innerHTML = items.map(p=>{
+          const titleHTML = p.url
+            ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>`
+            : p.title;
+
+          const doiHTML = p.doi
+            ? ` — <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI: ${p.doi}</a>`
+            : '';
+
+          const labels = (p.labels||[]).map(k=>`<span class="label">${labelDisplay.get(k) || k}</span>`).join('');
+
+          return `
+            <article class="pub">
+              <div class="title">
+                ${titleHTML}
+                <span class="type-badge">${typeDisplay.get(p.typeNorm) || p.typeNorm}</span>
+              </div>
+              <div class="meta">
+                ${p.authors} (${p.year})${p.venue ? ' — ' + p.venue : ''}${doiHTML}
+              </div>
+              <div class="label-list">${labels}</div>
+            </article>
+          `;
+        }).join('');
+
+        emptyEl.hidden = items.length > 0;
+      }
+
+      // Initial UI
+      restoreFromHash();
+      renderChips();
+      render();
+
+      // Events
+      chipBox.addEventListener('click', e=>{
+        const b = e.target.closest('.chip'); if(!b) return;
+        const k = b.dataset.key;
+        state.labels.has(k) ? state.labels.delete(k) : state.labels.add(k);
+        renderChips(); render(); writeHash();
+      });
+
+      typeSel.addEventListener('change', ()=>{ state.type = typeSel.value; render(); writeHash(); });
+      yearSel.addEventListener('change', ()=>{ state.year = yearSel.value; render(); writeHash(); });
+      logicSel.addEventListener('change',()=>{ state.mode = logicSel.value; render(); writeHash(); });
+      searchEl.addEventListener('input',()=>{ state.q = searchEl.value; render(); writeHash(); });
+
+      clearLink.addEventListener('click', (e)=>{
+        e.preventDefault();
+        state.type = '';
+        state.labels.clear();
+        state.mode = 'any';
+        state.year = '';
+        state.q = '';
+        typeSel.value = '';
+        yearSel.value = '';
+        logicSel.value = 'any';
+        searchEl.value = '';
+        renderChips(); render(); writeHash();
+      });
+
+      shareLink.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        const url = location.origin + location.pathname + buildHash();
+        try {
+          await navigator.clipboard.writeText(url);
+          const old = shareLink.textContent;
+          shareLink.textContent = 'Link copied!';
+          setTimeout(()=> shareLink.textContent = old, 1000);
+        } catch {
+          // Fallback
+          prompt('Copy this URL:', url);
+        }
+      });
+
+      // Handle back/forward restoring filters
+      window.addEventListener('hashchange', ()=>{
+        restoreFromHash();
+        renderChips();
+        render();
+      });
+    }
   </script>
+
+  <noscript>
+    <div class="container"><p><em>JavaScript is disabled — filtering requires JavaScript.</em></p></div>
+  </noscript>
 </body>
 </html>
-
-

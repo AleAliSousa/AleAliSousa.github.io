@@ -7,7 +7,7 @@
     "doi": "10.1016/B978-0-443-27380-3.00038-5",
     "url": "https://doi.org/10.1016/B978-0-443-27380-3.00038-5",
     "type": "review",
-    "labels": ["comparative","lifespan","neurodegeneration"]
+    "labels": ["comparative","lifespan","neurodegeneration","development","aging"]
   },
   {
     "title": "Same data, different analysts: variation in effect sizes due to analytical decisions in ecology and evolutionary biology",
@@ -27,7 +27,7 @@
     "doi": "10.1016/j.brainresbull.2025.111212",
     "url": "https://doi.org/10.1016/j.brainresbull.2025.111212",
     "type": "review",
-    "labels": ["comparative","lifespan","development"]
+    "labels": ["comparative","lifespan","development","aging"]
   },
   {
     "title": "Participant permanence: Exploring and enhancing experiences of research involvement in UK adults with vision impairment through an Online Participant Engagement Network (OPEN)",
@@ -87,7 +87,7 @@
     "doi": "10.1038/s42003-023-05034-3",
     "url": "https://www.nature.com/articles/s42003-023-05034-3",
     "type": "review",
-    "labels": ["neurodegeneration","aging","companion-animals","comparative"]
+    "labels": ["neurodegeneration","development","aging","lifespan","companion-animals","comparative"]
   },
   {
     "title": "From fossils to mind",
@@ -157,7 +157,7 @@
     "doi": "10.1016/bs.pbr.2022.12.014",
     "url": "https://doi.org/10.1016/bs.pbr.2022.12.014",
     "type": "review",
-    "labels": ["evolution","hominins","phylogenetics"]
+    "labels": ["evolution","fossil-hominins", "human-origins","phylogenetics"]
   },
   {
     "title": "Down a rabbit hole: Burrowing behaviour and larger home ranges are related to larger brains in Leporids",
@@ -167,7 +167,7 @@
     "doi": "10.1007/s10914-022-09624-6",
     "url": "https://doi.org/10.1007/s10914-022-09624-6",
     "type": "article",
-    "labels": ["evolution","mammals","behavior","brain-size"]
+    "labels": ["evolution","mammals","behavior","brain-size","lagomorphs"]
   },
   {
     "title": "The evolution of primate short-term memory",
@@ -177,7 +177,7 @@
     "doi": "10.26451/abc.09.04.06.2022",
     "url": "https://doi.org/10.26451/abc.09.04.06.2022",
     "type": "article",
-    "labels": ["primates","cognition","collaboration"]
+    "labels": ["primates","cognition","collaboration","working-memory"]
   },
   {
     "title": "Do we enjoy what we sense and perceive? A dissociation between aesthetic appreciation and basic perception of environmental objects or events",
@@ -367,7 +367,7 @@
     "doi": "10.1016/B978-0-444-53860-4.00014-3",
     "url": "https://doi.org/10.1016/B978-0-444-53860-4.00014-3",
     "type": "review",
-    "labels": ["evolution","hominins","anthropology"]
+    "labels": ["evolution","fossil-hominins", "human-origins","anthropology"]
   },
   {
     "title": "Hominoid visual brain structure volumes and the position of the lunate sulcus",
@@ -407,7 +407,7 @@
     "doi": "10.1093/molbev/msl209",
     "url": "https://doi.org/10.1093/molbev/msl209",
     "type": "article",
-    "labels": ["genetics","mtDNA","human-origins","anthropology"]
+    "labels": ["genetics","mtDNA","human-origins","anthropology","genomics"]
   },
   {
     "title": "Evolution of the Occipital Lobe",
@@ -427,7 +427,7 @@
     "doi": "10.1016/B0-12-370878-8/00018-5",
     "url": "https://doi.org/10.1016/B0-12-370878-8/00018-5",
     "type": "book-chapter",
-    "labels": ["evolution","hominins","neuroanatomy"]
+    "labels": ["evolution","fossil-hominins", "human-origins","neuroanatomy","human","primate", "anthropology"]
   },
   {
     "title": "Mate Preferences",
@@ -447,7 +447,7 @@
     "doi": "10.1007/978-3-319-16999-6_2768-1",
     "url": "https://doi.org/10.1007/978-3-319-16999-6_2768-1",
     "type": "encyclopedia-entry",
-    "labels": ["vision","neuroanatomy","encyclopedia"]
+    "labels": ["vision","neuroanatomy","human","primate"]
   },
   {
     "title": "BOOK REVIEW: The Neanderthals (Müller & Schrenk, 2008). Routledge",
@@ -457,7 +457,7 @@
     "doi": "",
     "url": "",
     "type": "book-review",
-    "labels": ["anthropology","neanderthals"]
+    "labels": ["anthropology","fossil-hominins", "human-origins", "human-origins"]
   },
   {
     "title": "From Fossils to Mind",
@@ -467,7 +467,7 @@
     "doi": "",
     "url": "https://www.elsevier.com/books/from-fossils-to-mind/calvey/978-0-323-99107-0",
     "type": "edited-volume",
-    "labels": ["evolution","museums","open-science","anthropology","collaboration"]
+    "labels": ["evolution","museums","open-science","anthropology","collaboration","fossil-hominins", "human-origins"]
   },
   {
     "title": "Hominoid brain organization: Histometric and morphometric comparisons of visual brain structures",

@@ -25,22 +25,34 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
+
+      background:
+        linear-gradient(rgba(249,249,249,0.96), rgba(249,249,249,0.96)),
+        url("image/cortex_ouy421V1.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+
       color: var(--text);
       line-height: 1.6;
     }
-
     .container { max-width: 960px; margin: 48px auto; padding: 0 24px; }
     header { text-align: center; margin-bottom: 24px; }
     h1 { margin: 0 0 8px; font-size: 2rem; }
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+      border: 2px solid var(--border);
+    }
     .subtitle { color: var(--muted); font-size: 1rem; }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
     }
-
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -48,7 +60,6 @@
       padding: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-
     .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
     .btn {
       display: inline-block;
@@ -61,7 +72,6 @@
       transition: background 0.15s ease-in-out;
     }
     .btn:hover { background: var(--accent-dark); }
-
     .link-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
     .tag {
       display: inline-block;
@@ -108,6 +118,7 @@
 <body>
   <div class="container">
     <header>
+      <img src="image/me.jpg" alt="Portrait of Alexandra A. de Sousa" class="profile-photo" />
       <h1>Alexandra A. de Sousa</h1>
       <div class="subtitle">Evolutionary Neuroscientist</div>
     </header>

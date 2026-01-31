@@ -17,7 +17,7 @@
     "doi": "10.1186/s12915-024-02101-x",
     "url": "https://doi.org/10.1186/s12915-024-02101-x",
     "type": "article",
-    "labels": ["methods","meta-research","open-science","statistics","collaboration"]
+    "labels": ["methods","meta-research","open-science","statistics","collaborative-science"]
   },
   {
     "title": "Translating Time: Challenges, Progress, and Future Directions",
@@ -37,7 +37,7 @@
     "doi": "10.1177/02646196241298203",
     "url": "https://journals.sagepub.com/doi/10.1177/02646196241298203",
     "type": "article",
-    "labels": ["visual-impairment","vision","public-engagement","collaboration","human-factors","accessibility"]
+    "labels": ["visual-impairment","vision","public-engagement","collaborative-science","human-factors","accessibility"]
   },
   {
     "title": "Thinking on your Feet: enhancing phylogenetic tree learning through a kinaesthetic approach",
@@ -177,7 +177,7 @@
     "doi": "10.26451/abc.09.04.06.2022",
     "url": "https://doi.org/10.26451/abc.09.04.06.2022",
     "type": "article",
-    "labels": ["primates","cognition","collaboration","working-memory"]
+    "labels": ["primates","cognition","collaborative-science","working-memory"]
   },
   {
     "title": "Do we enjoy what we sense and perceive? A dissociation between aesthetic appreciation and basic perception of environmental objects or events",
@@ -467,7 +467,7 @@
     "doi": "",
     "url": "https://www.elsevier.com/books/from-fossils-to-mind/calvey/978-0-323-99107-0",
     "type": "edited-volume",
-    "labels": ["evolution","museums","open-science","anthropology","collaboration","fossil-hominins", "human-origins"]
+    "labels": ["evolution","museums","open-science","anthropology","collaborative-science","fossil-hominins", "human-origins"]
   },
   {
     "title": "Hominoid brain organization: Histometric and morphometric comparisons of visual brain structures",
@@ -475,7 +475,7 @@
     "year": 2008,
     "venue": "PhD Dissertation, The George Washington University",
     "doi": "",
-    "url": "",
+    "url": "https://paleoanthro.org/media/dissertations/Alexandra%20de%20Sousa.pdf",
     "type": "dissertation",
     "labels": ["hominoids","histology","visual-cortex","anthropology","neuroanatomy"]
   }

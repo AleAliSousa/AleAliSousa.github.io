@@ -57,7 +57,7 @@
     "doi": "10.1177/0145482X241235167",
     "url": "https://journals.sagepub.com/doi/10.1177/0145482X241235167",
     "type": "article",
-    "labels": ["visual-impairment","vision","psychology","wellbeing"]
+    "labels": ["visual-impairment","vision","plasticity","psychology","wellbeing"]
   },
   {
     "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
@@ -117,7 +117,7 @@
     "doi": "10.3389/fpsyg.2023.1043088",
     "url": "https://doi.org/10.3389/fpsyg.2023.1043088",
     "type": "article",
-    "labels": ["human-factors","cross-cultural","workspace","architecture"]
+    "labels": ["human-factors","cross-cultural","VR","workplace","architecture"]
   },
   {
     "title": "The effects of social density, spatial density, noise, and office views on perceived personal space in the virtual workplace",
@@ -127,7 +127,7 @@
     "doi": "10.3389/fcomp.2023.1066881",
     "url": "https://doi.org/10.3389/fcomp.2023.1066881",
     "type": "article",
-    "labels": ["virtual-workplace","human-factors","VR","architecture"]
+    "labels": ["workplace","human-factors","VR","architecture"]
   },
   {
     "title": "Proximate factors in human mate preference: The role of sexual and romantic attraction",
@@ -257,7 +257,7 @@
     "doi": "10.1016/j.apergo.2020.103072",
     "url": "https://doi.org/10.1016/j.apergo.2020.103072",
     "type": "article",
-    "labels": ["visual-impairment","crossmodal","sensory-substitution","lateralization","vision","ergonomics","HCI"]
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","lateralization","vision","plasticity","ergonomics","HCI"]
   },
   {
     "title": "Primate hippocampus size and organization are predicted by sociality but not diet",
@@ -307,7 +307,7 @@
     "doi": "10.3233/RNN-150541",
     "url": "http://dx.doi.org/10.3233/RNN-150541",
     "type": "review",
-    "labels": ["visual-impairment","crossmodal","sensory-substitution","action-control"]
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","plasticity","action-control"]
   },
   {
     "title": "There or not there? A multidisciplinary review and research agenda on the impact of transparent barriers on human perception, action, and social behavior",

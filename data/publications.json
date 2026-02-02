@@ -67,7 +67,7 @@
     "doi": "10.1162/imag_a_00137",
     "url": "https://doi.org/10.1162/imag_a_00137",
     "type": "review",
-    "labels": ["digital-neuroscience","neuroinformatics","collaborative science"]
+    "labels": ["digital-neuroscience","neuroinformatics","collaborative-science"]
   },
   {
     "title": "Potential factors contributing to observed sex differences in Virtual Reality induced sickness",
@@ -117,7 +117,7 @@
     "doi": "10.3389/fpsyg.2023.1043088",
     "url": "https://doi.org/10.3389/fpsyg.2023.1043088",
     "type": "article",
-    "labels": ["human-factors","cross-cultural","personal-space","VR","workplace","architecture"]
+    "labels": ["human-factors","cross-cultural","personal-space","VR","workplace","architecture","spatial-cognition"]
   },
   {
     "title": "The effects of social density, spatial density, noise, and office views on perceived personal space in the virtual workplace",
@@ -127,7 +127,7 @@
     "doi": "10.3389/fcomp.2023.1066881",
     "url": "https://doi.org/10.3389/fcomp.2023.1066881",
     "type": "article",
-    "labels": ["workplace","human-factors","personal-space","VR","architecture"]
+    "labels": ["workplace","human-factors","personal-space","VR","architecture","spatial-cognition"]
   },
   {
     "title": "Proximate factors in human mate preference: The role of sexual and romantic attraction",
@@ -177,7 +177,7 @@
     "doi": "10.26451/abc.09.04.06.2022",
     "url": "https://doi.org/10.26451/abc.09.04.06.2022",
     "type": "article",
-    "labels": ["primates","cognition","collaborative-science","working-memory"]
+    "labels": ["primate","cognition","collaborative-science","working-memory"]
   },
   {
     "title": "Do we enjoy what we sense and perceive? A dissociation between aesthetic appreciation and basic perception of environmental objects or events",
@@ -247,7 +247,7 @@
     "doi": "10.1186/s12052-021-00143-1",
     "url": "https://doi.org/10.1186/s12052-021-00143-1",
     "type": "article",
-    "labels": ["visual-impairment","education","vision","accessibility","public-engagement"]
+    "labels": ["visual-impairment","education","vision","accessibility","public-engagement","museums"]
   },
   {
     "title": "Visual‑to‑auditory sensory substitution alters language asymmetry in both sighted novices and experienced visually impaired users",
@@ -257,7 +257,7 @@
     "doi": "10.1016/j.apergo.2020.103072",
     "url": "https://doi.org/10.1016/j.apergo.2020.103072",
     "type": "article",
-    "labels": ["visual-impairment","crossmodal","sensory-substitution","lateralization","vision","plasticity","ergonomics","HCI"]
+    "labels": ["visual-impairment","crossmodal","sensory-substitution","laterality","vision","plasticity","ergonomics","HCI"]
   },
   {
     "title": "Primate hippocampus size and organization are predicted by sociality but not diet",
@@ -267,7 +267,7 @@
     "doi": "10.1098/rspb.2019.1712",
     "url": "https://doi.org/10.1098/rspb.2019.1712",
     "type": "article",
-    "labels": ["primates","hippocampus","social-behavior","evolution"]
+    "labels": ["primate","hippocampus","social-behavior","evolution","spatial-cognition"]
   },
   {
     "title": "The right way to kiss: directionality bias in head‑turning during kissing",
@@ -297,7 +297,7 @@
     "doi": "10.3389/fpsyg.2016.00064",
     "url": "https://doi.org/10.3389/fpsyg.2016.00064",
     "type": "article",
-    "labels": ["cognition","environment","crossmodal","architecture"]
+    "labels": ["cognition","environment","crossmodal","architecture","spatial-cognition"]
   },
   {
     "title": "Other ways of seeing: From behavior to neural mechanisms in the online visual control of action with sensory substitution",
@@ -317,7 +317,7 @@
     "doi": "10.3389/fpsyg.2015.01381",
     "url": "https://doi.org/10.3389/fpsyg.2015.01381",
     "type": "review",
-    "labels": ["perception","crossmodal","personal-space","architecture"]
+    "labels": ["perception","crossmodal","personal-space","architecture","spatial-cognition"]
   },
   {
     "title": "What can volumes reveal about human brain evolution? A framework for bridging behavioral, histometric, and volumetric perspectives",
@@ -337,7 +337,7 @@
     "doi": "10.1159/000346495",
     "url": "https://doi.org/10.1159/000346495",
     "type": "article",
-    "labels": ["neuroanatomy","primates","LGN"]
+    "labels": ["neuroanatomy","primate","LGN"]
   },
   {
     "title": "Variable temporo‑insular cortex neuroanatomy in primates suggests a bottleneck effect in eastern gorillas",
@@ -347,7 +347,7 @@
     "doi": "10.1002/cne.23448",
     "url": "https://doi.org/10.1002/cne.23448",
     "type": "article",
-    "labels": ["neuroanatomy","primates","cortex"]
+    "labels": ["neuroanatomy","primate","cortex"]
   },
   {
     "title": "A volumetric comparison of the insular cortex and its subregions in primates",
@@ -357,7 +357,7 @@
     "doi": "10.1016/j.jhevol.2012.12.003",
     "url": "https://doi.org/10.1016/j.jhevol.2012.12.003",
     "type": "article",
-    "labels": ["neuroanatomy","primates","insula"]
+    "labels": ["neuroanatomy","primate","insula"]
   },
   {
     "title": "Hominins and the emergence of the modern human brain",
@@ -377,7 +377,7 @@
     "doi": "10.1016/j.jhevol.2009.11.011",
     "url": "http://dx.doi.org/10.1016/j.jhevol.2009.11.011",
     "type": "article",
-    "labels": ["neuroanatomy","hominoids","visual-cortex"]
+    "labels": ["neuroanatomy","hominoids","visual-cortex","fossil-hominins"]
   },
   {
     "title": "Comparative cytoarchitectural analyses of striate and extrastriate areas in hominoids",
@@ -397,7 +397,7 @@
     "doi": "10.1159/000096986",
     "url": "https://doi.org/10.1159/000096986",
     "type": "article",
-    "labels": ["neuroanatomy","primates","interneurons","visual-cortex"]
+    "labels": ["neuroanatomy","primate","interneurons","visual-cortex"]
   },
   {
     "title": "Whole mtDNA genome sequence analysis of ancient African lineages",

@@ -57,7 +57,7 @@
     "doi": "10.1177/0145482X241235167",
     "url": "https://journals.sagepub.com/doi/10.1177/0145482X241235167",
     "type": "article",
-    "labels": ["visual-impairment","vision","plasticity","psychology","wellbeing"]
+    "labels": ["visual-impairment","vision","plasticity","psychology","wellbeing","aesthetics"]
   },
   {
     "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
@@ -117,7 +117,7 @@
     "doi": "10.3389/fpsyg.2023.1043088",
     "url": "https://doi.org/10.3389/fpsyg.2023.1043088",
     "type": "article",
-    "labels": ["human-factors","cross-cultural","personal-space","VR","workplace","architecture","spatial-cognition"]
+    "labels": ["human-factors","cross-cultural","personal-space","VR","workplace","architecture","spatial-cognition","aesthetics"]
   },
   {
     "title": "The effects of social density, spatial density, noise, and office views on perceived personal space in the virtual workplace",
@@ -127,7 +127,7 @@
     "doi": "10.3389/fcomp.2023.1066881",
     "url": "https://doi.org/10.3389/fcomp.2023.1066881",
     "type": "article",
-    "labels": ["workplace","human-factors","personal-space","VR","architecture","spatial-cognition"]
+    "labels": ["workplace","human-factors","personal-space","VR","architecture","spatial-cognition","aesthetics"]
   },
   {
     "title": "Proximate factors in human mate preference: The role of sexual and romantic attraction",
@@ -137,7 +137,7 @@
     "doi": "10.1080/00224499.2023.2176811",
     "url": "https://doi.org/10.1080/00224499.2023.2176811",
     "type": "article",
-    "labels": ["psychology","mate-preference","attraction"]
+    "labels": ["psychology","mate-preference","attraction","aesthetics"]
   },
   {
     "title": "Evolutionary and genomic perspectives of brain ageing and neurodegenerative diseases",
@@ -217,7 +217,7 @@
     "doi": "10.1007/s10508-020-01901-w",
     "url": "https://doi.org/10.1007/s10508-020-01901-w",
     "type": "article",
-    "labels": ["visual-impairment","vision","psychology","mate-preference"]
+    "labels": ["visual-impairment","vision","psychology","mate-preference","aesthetics"]
   },
   {
     "title": "Neuroplasticity and crossmodal connectivity in the normal, healthy brain",
@@ -437,7 +437,7 @@
     "doi": "10.1007/978-3-031-08956-5_893-1",
     "url": "https://link.springer.com/referenceworkentry/10.1007/978-3-031-08956-5_893-1",
     "type": "encyclopedia-entry",
-    "labels": ["psychology","mate-preference"]
+    "labels": ["psychology","mate-preference","aesthetics"]
   },
   {
     "title": "Human Visual Neurobiology",
@@ -479,5 +479,14 @@
     "type": "dissertation",
     "labels": ["hominoids","histology","visual-cortex","anthropology","neuroanatomy"]
   }
-
+{
+    "title": "Evidence for symbolic behavior in Upper Paleolithic burials: implications for modern human origins in Europe",
+    "authors": "de Sousa, A. A.",
+    "year": 2000,
+    "venue": "Undergraduate Honors Thesis, Arizona State University",
+    "doi": "",
+    "url": "https://paleoanthro.org/media/dissertations/Alexandra%20de%20Sousa.pdf",
+    "type": "dissertation",
+    "labels": ["burial", "Europe","history","Paleolithic period","human evolution","anthropology","archaeology", "aesthetics"]
+  }
 ]

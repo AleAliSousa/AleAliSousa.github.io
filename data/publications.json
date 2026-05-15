@@ -297,7 +297,7 @@
     "doi": "10.3389/fpsyg.2016.00064",
     "url": "https://doi.org/10.3389/fpsyg.2016.00064",
     "type": "article",
-    "labels": ["cognition","environment","crossmodal","architecture","spatial-cognition"]
+    "labels": ["cognition","environment","crossmodal","architecture","spatial-cognition", "aesthetics"]
   },
   {
     "title": "Other ways of seeing: From behavior to neural mechanisms in the online visual control of action with sensory substitution",
@@ -367,7 +367,7 @@
     "doi": "10.1016/B978-0-444-53860-4.00014-3",
     "url": "https://doi.org/10.1016/B978-0-444-53860-4.00014-3",
     "type": "review",
-    "labels": ["evolution","fossil-hominins", "human-origins","anthropology"]
+    "labels": ["evolution","fossil-hominins", "human-origins","anthropology","archaeology"]
   },
   {
     "title": "Hominoid visual brain structure volumes and the position of the lunate sulcus",
